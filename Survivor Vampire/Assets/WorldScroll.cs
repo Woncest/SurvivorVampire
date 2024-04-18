@@ -21,6 +21,10 @@ public class WorldScroll : MonoBehaviour
         terrainTiles = new GameObject[terrainTileHorizontalCount, terrainTileVerticalCount];
     }
 
+    private void Start(){
+        UpdateTilesOnScreen();
+    }
+
     private void Update(){
         playerTilePosition.x = (int)(playerTransfrom.position.x / tileSize);
         playerTilePosition.y = (int)(playerTransfrom.position.y / tileSize);
