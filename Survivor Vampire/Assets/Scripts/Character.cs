@@ -7,6 +7,16 @@ public class Character : MonoBehaviour
     public float maxHP = 1000;
     public float currentHP = 1000;
     [SerializeField] StatusBar hpBar;
+
+    [HideInInspector] public Level level;
+    [HideInInspector] public Coins coins;
+
+    private void Awake(){
+        level = GetComponent<Level>();
+        coins = GetComponent<Coins>();
+    }
+
+
     public void TakeDamage(float damage){
         currentHP -= damage;
         if(currentHP <= 0){

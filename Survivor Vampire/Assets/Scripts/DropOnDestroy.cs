@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DropOnDestroy : MonoBehaviour
 {
-    [SerializeField] GameObject healthPickup;
+    [SerializeField] GameObject dropItemPrefab;
 
     private void OnDestroy(){
-        Transform t = Instantiate(healthPickup).transform;
+        Transform t = Instantiate(dropItemPrefab).transform;
         t.position = transform.position;
     }
 }

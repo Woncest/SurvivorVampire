@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1878152401372600928}
   - component: {fileID: 6877252800392020230}
   - component: {fileID: 805818714996773765}
+  - component: {fileID: -7603182355169599084}
   m_Layer: 0
   m_Name: bat
   m_TagString: Untagged
@@ -193,5 +194,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5178145d5b19a94da4935029ab5ca5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestionation: {fileID: 0}
   speed: 1
+  hp: 4
+  damage: 1
+  experience_reward: 200
+--- !u!114 &-7603182355169599084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5034400227288619919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae03538dfc65964dbd0463fa7b496bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemPrefab: {fileID: 7816418390334873818, guid: 8e520bd9414c850419b1eab7a66a8bb6, type: 3}
