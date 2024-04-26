@@ -22,6 +22,6 @@ public class Character : MonoBehaviour
         if(currentHP > maxHP){
             currentHP = maxHP;
         }
-
+        hpBar.SetState(currentHP, maxHP);
     }
 }
