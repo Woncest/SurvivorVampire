@@ -5,7 +5,7 @@ using UnityEngine.Timeline;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform targetDestionation;
+    Transform targetDestionation;
     GameObject targetGameObject;
     Character targetCharacter;
     [SerializeField] float speed;
@@ -18,7 +18,11 @@ public class Enemy : MonoBehaviour
 
     private void Awake(){
         rgdbd2d = GetComponent<Rigidbody2D>();
-        targetGameObject = targetDestionation.gameObject;
+    }
+
+    public void SetTarget(GameObject target){
+        targetGameObject = target;
+        targetDestionation = target.transform;
         targetCharacter = targetGameObject.GetComponent<Character>();
     }
 
