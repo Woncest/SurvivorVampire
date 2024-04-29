@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 1, y: 0}
+  spawnObjects: []
 --- !u!4 &138683381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4584370660431853845, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
@@ -772,6 +773,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
   m_PrefabInstance: {fileID: 1146552531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &327436707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327436708}
+  - component: {fileID: 327436709}
+  m_Layer: 0
+  m_Name: SpawnableObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &327436708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327436707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1715784436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327436709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327436707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53dfce18d1052274795aa825d773521c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSpawn: {fileID: 5180067693965067699, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
+  probability: 1
 --- !u!4 &330344367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
@@ -1690,6 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 2, y: 0}
+  spawnObjects: []
 --- !u!1001 &571920096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2153,63 +2201,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
---- !u!1001 &665786186
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.746027
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.360384
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733697912819778893, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5180067693965067699, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
-      propertyPath: m_Name
-      value: chest2_0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e7342fd1e75a78d429012b0f55931f03, type: 3}
 --- !u!1 &683564605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +2710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 0, y: 1}
+  spawnObjects: []
 --- !u!4 &752114721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4584370660431853845, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
@@ -3588,6 +3580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 2, y: 1}
+  spawnObjects: []
 --- !u!4 &922356236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
@@ -3840,6 +3833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 0, y: 2}
+  spawnObjects: []
 --- !u!1 &1108353981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 2, y: 2}
+  spawnObjects: []
 --- !u!1001 &1193607175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4716,6 +4711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 0, y: 0}
+  spawnObjects: []
 --- !u!1 &1444397392
 GameObject:
   m_ObjectHideFlags: 3
@@ -4911,6 +4907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 1, y: 2}
+  spawnObjects: []
 --- !u!1 &1480659901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,6 +6013,7 @@ Transform:
   - {fileID: 216955225}
   - {fileID: 1987934119}
   - {fileID: 1603249185}
+  - {fileID: 327436708}
   m_Father: {fileID: 362067887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1715784437
@@ -6031,6 +6029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePositon: {x: 1, y: 1}
+  spawnObjects:
+  - {fileID: 327436709}
 --- !u!1 &1722771096
 GameObject:
   m_ObjectHideFlags: 0
@@ -7128,4 +7128,3 @@ SceneRoots:
   - {fileID: 701042386}
   - {fileID: 428294598}
   - {fileID: 375764302}
-  - {fileID: 665786186}

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6877252800392020230}
   - component: {fileID: 805818714996773765}
   - component: {fileID: -7603182355169599084}
+  - component: {fileID: 9203924848841684012}
   m_Layer: 0
   m_Name: bat
   m_TagString: Untagged
@@ -197,7 +198,6 @@ MonoBehaviour:
   speed: 1
   hp: 4
   damage: 1
-  experience_reward: 200
 --- !u!114 &-7603182355169599084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +211,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropItemPrefab: {fileID: 7816418390334873818, guid: 8e520bd9414c850419b1eab7a66a8bb6, type: 3}
+--- !u!114 &9203924848841684012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5034400227288619919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810b8fad155543a4fb1f899c9c97144d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
