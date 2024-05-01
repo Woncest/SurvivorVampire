@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbd8582447380d43a38c01d80f4c493, type: 3}
   m_Name: WhipSO
   m_EditorClassIdentifier: 
-  weaponName: 
+  weaponName: Whip
   stats:
-    damage: 0
-    timeToAttack: 0
+    damage: 2
+    timeToAttack: 2
+  weaponBasePrefab: {fileID: 6187033298397833068, guid: bec9d1d83b4f8f143825be766c13fd3b, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbd8582447380d43a38c01d80f4c493, type: 3}
   m_Name: ThrowingKnifeSO
   m_EditorClassIdentifier: 
-  weaponName: 
+  weaponName: Throwing Knife
   stats:
-    damage: 0
-    timeToAttack: 0
-  weaponBasePrefab: {fileID: 0}
+    damage: 4
+    timeToAttack: 2
+  weaponBasePrefab: {fileID: 4762204693709609457, guid: e607cba563406b6448d9d79dee00f9ee, type: 3}
