@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour
         rgbd2d = GetComponent<Rigidbody2D>();
         movementVector = new Vector3();
         animate = GetComponent<Animate>();
+        lastHorizontalVector = -1f;
+        lastVerticalVector = 1f;
     }
 
     // Update is called once per frame

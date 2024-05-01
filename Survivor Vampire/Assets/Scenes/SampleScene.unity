@@ -4969,6 +4969,7 @@ GameObject:
   - component: {fileID: 1480659907}
   - component: {fileID: 1480659908}
   - component: {fileID: 1480659909}
+  - component: {fileID: 1480659910}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -5140,6 +5141,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinAcquired: 0
   coinsCountText: {fileID: 711697171}
+--- !u!114 &1480659910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480659901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57040359435f93e4e816522d9d82c56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  testArmor: {fileID: 11400000, guid: c3f14cf57a2ad0441bb9893eac74e44e, type: 2}
 --- !u!4 &1487567557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5860642491111244451, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
