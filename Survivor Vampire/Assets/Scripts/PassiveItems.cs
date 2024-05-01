@@ -8,10 +8,7 @@ public class PassiveItems : MonoBehaviour
 
     Character character;
 
-    [SerializeField] Item testArmor;
-
     private void Start(){
-        Equip(testArmor);
     }
 
     private void Awake(){
