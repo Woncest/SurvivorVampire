@@ -9,6 +9,11 @@ public class Level : MonoBehaviour
     [SerializeField] ExpBar expBar;
     [SerializeField] UpgradePanelManager upgradePanelManager;
 
+    [SerializeField] List<UpgradesSO> upgrades;
+    List<UpgradesSO> selectedUpgrades;
+
+    List<UpgradesSO> acquiredUpgrades;
+
     int TO_LEVEL_UP{
         get{
             return level * 1000;
@@ -35,9 +40,36 @@ public class Level : MonoBehaviour
 
     private void LevelUp()
     {
-        upgradePanelManager.OpenPanel();
+        if(selectedUpgrades == null) { selectedUpgrades = new List<UpgradesSO>(); }
+        selectedUpgrades.Clear();
+        selectedUpgrades.AddRange(GetUpgrades(4));
+
+        upgradePanelManager.OpenPanel(selectedUpgrades);
         experience -= TO_LEVEL_UP;
         level += 1;
         expBar.SetLevelText(level);
+    }
+
+    public void Upgrade(int selectedUpgradeID){
+        UpgradesSO upgrade = selectedUpgrades[selectedUpgradeID - 1];
+
+        if(acquiredUpgrades == null) { acquiredUpgrades = new List<UpgradesSO>(); }
+
+        acquiredUpgrades.Add(upgrade);
+        upgrades.Remove(upgrade);
+    }
+
+    public List<UpgradesSO> GetUpgrades(int count){
+        List<UpgradesSO> upgradeList = new List<UpgradesSO>();
+
+        if(count > upgrades.Count){
+            count = upgrades.Count;
+        }
+
+        for(int i = 0; i < count; i++){
+            upgradeList.Add(upgrades[Random.Range(0, upgrades.Count)]);
+        }
+
+        return upgradeList;
     }
 }
