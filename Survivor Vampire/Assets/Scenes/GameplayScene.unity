@@ -735,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362067887}
   - component: {fileID: 362067886}
+  - component: {fileID: 362067888}
   m_Layer: 0
   m_Name: ---------World---------
   m_TagString: Untagged
@@ -784,6 +785,20 @@ Transform:
   - {fileID: 118553823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362067888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362067885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d155c71d3ac46940a7bf3d42c8a2b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageSO: {fileID: 11400000, guid: f0e2ff87c8535bf448335289f06f0274, type: 2}
+  enemiesManager: {fileID: 701042385}
 --- !u!1 &373521791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,7 +1880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5034400227288619919, guid: 11fb12e02385efd4e9f3cfe3688707d3, type: 3}
   spawnArea: {x: 15, y: 10}
-  spawnTimer: 2
+  spawnTimer: 0.8
 --- !u!4 &701042386
 Transform:
   m_ObjectHideFlags: 0

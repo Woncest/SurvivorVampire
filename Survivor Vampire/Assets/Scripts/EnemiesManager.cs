@@ -22,7 +22,7 @@ public class EnemiesManager : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         Vector3 positon = GenerateRandomPosition();
 
