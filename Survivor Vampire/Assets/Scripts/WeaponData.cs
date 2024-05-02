@@ -19,6 +19,7 @@ public class WeaponStats{
     {
         this.damage += weaponToUpgradeStats.damage;
         this.timeToAttack += weaponToUpgradeStats.timeToAttack;
+        this.numberOfAttacks += weaponToUpgradeStats.numberOfAttacks;
 
     }
 }

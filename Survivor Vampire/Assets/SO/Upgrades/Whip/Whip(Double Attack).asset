@@ -19,3 +19,4 @@ MonoBehaviour:
   weaponUpgradeStats:
     damage: 0
     timeToAttack: 0
+    numberOfAttacks: 1
