@@ -7,10 +7,12 @@ using UnityEngine;
 public class WeaponStats{
     public float damage;
     public float timeToAttack;
+    public int numberOfAttacks;
 
-    public WeaponStats(float damage, float timeToAttack){
+    public WeaponStats(float damage, float timeToAttack, int numberOfAttacks){
         this.damage = damage;
         this.timeToAttack = timeToAttack;
+        this.numberOfAttacks = numberOfAttacks;
     }
 
     internal void Sum(WeaponStats weaponToUpgradeStats)
