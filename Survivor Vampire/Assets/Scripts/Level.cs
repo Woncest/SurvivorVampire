@@ -84,9 +84,19 @@ public class Level : MonoBehaviour
             count = upgrades.Count;
         }
 
-        for(int i = 0; i < count; i++){
-            upgradeList.Add(upgrades[Random.Range(0, upgrades.Count)]);
-        }
+        HashSet<int> chosenIndices = new HashSet<int>(); // Keep track of chosen indices
+
+    for (int i = 0; i < count; i++)
+    {
+        int randomIndex;
+        do
+        {
+            randomIndex = Random.Range(0, upgrades.Count); // Get a random index
+        } while (chosenIndices.Contains(randomIndex)); // Keep generating until it's unique
+
+        chosenIndices.Add(randomIndex); // Add the index to the chosen set
+        upgradeList.Add(upgrades[randomIndex]); // Add the corresponding upgrade to the list
+    }
 
         return upgradeList;
     }
