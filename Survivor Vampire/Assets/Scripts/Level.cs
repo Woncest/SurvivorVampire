@@ -63,6 +63,7 @@ public class Level : MonoBehaviour
 
         switch(upgrade.upgradeType){
             case UpgradeType.WeaponUpgrade:
+            weaponManager.UpgradeWeapon(upgrade);
                 break;
             case UpgradeType.ItemUpgrade:
                 break;

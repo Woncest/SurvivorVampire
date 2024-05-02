@@ -18,5 +18,6 @@ public class UpgradesSO : ScriptableObject
     public Sprite icon;
 
     public WeaponData weaponData;
+    public WeaponStats weaponUpgradeStats;
 
 }

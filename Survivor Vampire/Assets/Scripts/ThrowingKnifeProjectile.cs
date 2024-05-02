@@ -31,6 +31,7 @@ public class ThrowingKnifeProjectile : MonoBehaviour
         foreach(Collider2D c in hit){
             Enemy e = c.GetComponent<Enemy>();
             if(e != null){
+                MessageSystem.instance.PostMessage(damage.ToString(), c.transform.position);
                 e.TakeDamage(damage);
                 hitDetected = true;
                 break;
