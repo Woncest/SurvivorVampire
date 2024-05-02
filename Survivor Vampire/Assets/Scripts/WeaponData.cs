@@ -20,4 +20,5 @@ public class WeaponData : ScriptableObject
     public String weaponName;
     public WeaponStats stats;
     public GameObject weaponBasePrefab;
+    public List<UpgradesSO> upgrades;
 }

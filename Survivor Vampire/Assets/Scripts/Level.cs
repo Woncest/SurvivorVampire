@@ -14,6 +14,12 @@ public class Level : MonoBehaviour
 
     List<UpgradesSO> acquiredUpgrades;
 
+    WeaponManager weaponManager;
+
+    private void Awake(){
+        weaponManager = GetComponent<WeaponManager>();
+    }
+
     int TO_LEVEL_UP{
         get{
             return level * 1000;
@@ -55,6 +61,18 @@ public class Level : MonoBehaviour
 
         if(acquiredUpgrades == null) { acquiredUpgrades = new List<UpgradesSO>(); }
 
+        switch(upgrade.upgradeType){
+            case UpgradeType.WeaponUpgrade:
+                break;
+            case UpgradeType.ItemUpgrade:
+                break;
+            case UpgradeType.WeaponUnlock:
+                weaponManager.AddWeapon(upgrade.weaponData);
+                break;
+            case UpgradeType.ItemUnlock:
+                break;
+        }
+
         acquiredUpgrades.Add(upgrade);
         upgrades.Remove(upgrade);
     }
@@ -71,5 +89,10 @@ public class Level : MonoBehaviour
         }
 
         return upgradeList;
+    }
+
+    internal void AddUpgradesIntoList(List<UpgradesSO> upgradesToAdd)
+    {
+        upgrades.AddRange(upgradesToAdd);
     }
 }

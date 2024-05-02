@@ -17,4 +17,6 @@ public class UpgradesSO : ScriptableObject
     public String upgradeName;
     public Sprite icon;
 
+    public WeaponData weaponData;
+
 }
