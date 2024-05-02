@@ -20,6 +20,7 @@ public class WhipWeapon : WeaponBase
         foreach (Collider2D collider in colliders){
             IDamageable i = collider.gameObject.GetComponent<IDamageable>();
             if(i != null){
+                PostDamage(weaponStats.damage, collider.transform.position);
                 i.TakeDamage(weaponStats.damage);
             }
         }
