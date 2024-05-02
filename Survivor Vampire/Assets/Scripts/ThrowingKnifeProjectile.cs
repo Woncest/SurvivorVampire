@@ -7,7 +7,7 @@ public class ThrowingKnifeProjectile : MonoBehaviour
 {
     Vector3 direction;
     [SerializeField] float speed;
-    [SerializeField] float damage = 5;
+    public float damage = 5;
 
     public void SetDirection(float dir_x, float dir_y){
         direction = new Vector3(dir_x, dir_y, 0f);

@@ -8,6 +8,10 @@ public class Character : MonoBehaviour
     public float maxHP = 1000;
     public float currentHP = 1000;
     public float armor = 0;
+
+    public float hpRegenerationRate = 1f;
+    private float hpRegenTimer;
+
     [SerializeField] StatusBar hpBar;
 
     [HideInInspector] public Level level;
@@ -17,6 +21,15 @@ public class Character : MonoBehaviour
     private void Awake(){
         level = GetComponent<Level>();
         coins = GetComponent<Coins>();
+    }
+
+    private void Update(){
+        hpRegenTimer += Time.deltaTime * hpRegenerationRate;
+
+        if(hpRegenTimer > 1f){
+            Heal(1);
+            hpRegenTimer -= 1f;
+        }
     }
 
 
