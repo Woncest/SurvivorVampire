@@ -6,7 +6,7 @@ public class StageEventManager : MonoBehaviour
 {
     [SerializeField] StageSO stageSO;
     [SerializeField] EnemiesManager enemiesManager;
-    float timer;
+    public float timer {get; private set;}
     int eventIndexer;
 
     private void Update(){
