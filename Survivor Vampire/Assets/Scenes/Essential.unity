@@ -3427,6 +3427,8 @@ MonoBehaviour:
   upgradePanelManager: {fileID: 770776916}
   upgrades:
   - {fileID: 11400000, guid: 4995b516af3ee9d4f97f78e028ee1a84, type: 2}
+  startUpgrades:
+  - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
 --- !u!114 &1480659909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3453,7 +3455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57040359435f93e4e816522d9d82c56b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
 --- !u!114 &1480659911
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,4 +20,6 @@ public class UpgradesSO : ScriptableObject
     public WeaponData weaponData;
     public WeaponStats weaponUpgradeStats;
 
+    public Item item;
+
 }

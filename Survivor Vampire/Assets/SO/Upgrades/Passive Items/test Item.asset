@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25a5f40ba090f840b923a2f209f6a04, type: 3}
+  m_Name: test Item
+  m_EditorClassIdentifier: 
+  upgradeType: 3
+  upgradeName: test
+  icon: {fileID: -237735265, guid: ce6e98ba543241c44a438b5d9d5d14d0, type: 3}
+  weaponData: {fileID: 0}
+  weaponUpgradeStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 11400000, guid: c3f14cf57a2ad0441bb9893eac74e44e, type: 2}

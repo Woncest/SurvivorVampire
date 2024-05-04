@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PassiveItems : MonoBehaviour
 {
-    [SerializeField] List<Item> items;
+    List<Item> items;
 
     Character character;
 
@@ -24,6 +24,10 @@ public class PassiveItems : MonoBehaviour
     }
 
     public void UnEquip(Item item){
-
+        if(items == null){
+            items = new List<Item>();
+        }
+        items.Remove(item);
+        item.UnEquip(character);
     }
 }
