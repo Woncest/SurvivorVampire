@@ -16,7 +16,7 @@ public class StageEventManager : MonoBehaviour
             Debug.Log(stageSO.events[eventIndexer].message);
 
             for(int i = 0; i < stageSO.events[eventIndexer].count; i++){
-                enemiesManager.SpawnEnemy();
+                enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn);
             }
 
             eventIndexer++;

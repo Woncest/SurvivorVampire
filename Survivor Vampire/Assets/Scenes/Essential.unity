@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45b872bb757f114bad0b6abcd83e5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCompleteLevel: 250
+  timeToCompleteLevel: 600
   timer: {fileID: 1999151011}
   levelCompletePanel: {fileID: 1601134542}
 --- !u!1 &818681844

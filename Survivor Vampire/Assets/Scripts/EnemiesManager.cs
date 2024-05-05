@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemiesManager : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
-    [SerializeField] GameObject enemyAnimation;
+    [SerializeField] EnemySO enemyAnimation;
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawnTimer;
     GameObject target;
@@ -19,11 +19,11 @@ public class EnemiesManager : MonoBehaviour
     private void Update(){
         timer -= Time.deltaTime;
         if (timer < 0){
-            SpawnEnemy();
+            SpawnEnemy(enemyAnimation);
         }
     }
 
-    public void SpawnEnemy()
+    public void SpawnEnemy(EnemySO enemyToSpawn)
     {
         Vector3 positon = GenerateRandomPosition();
 
@@ -37,7 +37,7 @@ public class EnemiesManager : MonoBehaviour
         timer = spawnTimer;
 
         //spawning sprite object of enemy
-        GameObject spriteObject = Instantiate(enemyAnimation);
+        GameObject spriteObject = Instantiate(enemyToSpawn.animatedPrefab);
         spriteObject.transform.parent = newEnemy.transform;
         spriteObject.transform.localPosition = Vector3.zero;
     }

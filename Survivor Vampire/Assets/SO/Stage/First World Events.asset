@@ -15,13 +15,13 @@ MonoBehaviour:
   events:
   - time: 5
     message: Hello
-    enemyToSpawn: {fileID: 0}
+    enemyToSpawn: {fileID: 11400000, guid: 6be2e35441b66ba4e9881f1abfd68a75, type: 2}
     count: 10
   - time: 10
     message: Hello Again
-    enemyToSpawn: {fileID: 0}
+    enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
     count: 15
   - time: 15
     message: Hello Again Again
-    enemyToSpawn: {fileID: 0}
+    enemyToSpawn: {fileID: 11400000, guid: 6be2e35441b66ba4e9881f1abfd68a75, type: 2}
     count: 20

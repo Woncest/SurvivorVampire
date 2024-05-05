@@ -7,7 +7,7 @@ using UnityEngine;
 public class StageEvent{
     public float time;
     public String message;
-    public Enemy enemyToSpawn;
+    public EnemySO enemyToSpawn;
     public int count;
 }
 
