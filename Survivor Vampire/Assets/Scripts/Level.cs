@@ -68,9 +68,10 @@ public class Level : MonoBehaviour
 
         switch(upgrade.upgradeType){
             case UpgradeType.WeaponUpgrade:
-            weaponManager.UpgradeWeapon(upgrade);
+                weaponManager.UpgradeWeapon(upgrade);
                 break;
             case UpgradeType.ItemUpgrade:
+                passiveItems.UpgradeItem(upgrade);
                 break;
             case UpgradeType.WeaponUnlock:
                 weaponManager.AddWeapon(upgrade.weaponData);

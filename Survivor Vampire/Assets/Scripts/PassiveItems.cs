@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,8 +20,17 @@ public class PassiveItems : MonoBehaviour
         if(items == null){
             items = new List<Item>();
         }
-        items.Add(item);
-        item.Equip(character);
+        Item newItemInstance = new Item();
+        newItemInstance.Init(item.Name);
+        newItemInstance.stats.Sum(item.stats);
+
+        items.Add(newItemInstance);
+        newItemInstance.Equip(character);
+
+        Level level = GetComponent<Level>();
+        if(level != null){
+            level.AddUpgradesIntoList(item.upgrades);
+        }
     }
 
     public void UnEquip(Item item){
@@ -29,5 +39,13 @@ public class PassiveItems : MonoBehaviour
         }
         items.Remove(item);
         item.UnEquip(character);
+    }
+
+    internal void UpgradeItem(UpgradesSO upgrade)
+    {
+        Item itemToUpgrade = items.Find(id => id.Name == upgrade.item.name);
+        itemToUpgrade.UnEquip(character);
+        itemToUpgrade.stats.Sum(upgrade.itemStats);
+        itemToUpgrade.Equip(character);
     }
 }
