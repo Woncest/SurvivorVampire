@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     private void OnCollisionStay2D(Collision2D coll){
+        //Only move vertical or horizontal when hitting obstacle
         if(coll.gameObject == targetGameObject){
             Attack();
         }
