@@ -9,7 +9,7 @@ public class SpawnObjects : MonoBehaviour
 
     public void Spawn(){
         if(Random.value < probability){
-            GameObject go = Instantiate(toSpawn, transform.position, Quaternion.identity);
+            SpawnManager.instance.SpawnObject(transform.position, toSpawn);
         }
     }
 }
