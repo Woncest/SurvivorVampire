@@ -6,18 +6,19 @@ using UnityEngine;
 public class TimerUI : MonoBehaviour
 {
     TextMeshProUGUI text;
-
-    public float time;
+    StageTimer stageTimer;
 
     private void Awake(){
         text = GetComponent<TextMeshProUGUI>();
     }
 
+    private void Start(){
+        stageTimer = FindObjectOfType<StageTimer>();
+    }
+
     private void Update(){
-        //a bit meh counting where you print the text but, had problems counting inside the map Scene
-        time += Time.deltaTime;
-        int minutes = (int) (time / 60f);
-        int seconds = (int) (time % 60f);
+        int minutes = (int) (stageTimer.time / 60f);
+        int seconds = (int) (stageTimer.time % 60f);
 
         text.text = minutes.ToString() + ":" + seconds.ToString("00");
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,14 @@ public class StageEventManager : MonoBehaviour
     [SerializeField] EnemiesManager enemiesManager;
     private StageTimer stageTimer;
     int eventIndexer;
+    PlayerWinManager playerWin;
 
     private void Awake(){
         stageTimer = GetComponent<StageTimer>();
+    }
+
+    private void Start(){
+        playerWin = FindObjectOfType<PlayerWinManager>();
     }
 
     private void Update(){
@@ -26,11 +32,17 @@ public class StageEventManager : MonoBehaviour
                     SpawnObjects();
                     break;
                 case StageEventType.WinStage:
+                    WinStage();
                     break;
             }
 
             eventIndexer++;
         }
+    }
+
+    private void WinStage()
+    {
+        playerWin.Win();
     }
 
     private void SpawnEnemies()

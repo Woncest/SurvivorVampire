@@ -37,3 +37,9 @@ MonoBehaviour:
     enemyToSpawn: {fileID: 11400000, guid: 6be2e35441b66ba4e9881f1abfd68a75, type: 2}
     objectToSpawn: {fileID: 0}
     count: 20
+  - eventType: 2
+    time: 20
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 0}
+    count: 0

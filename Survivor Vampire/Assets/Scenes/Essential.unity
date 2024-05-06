@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 770776914}
   - component: {fileID: 770776915}
   - component: {fileID: 770776916}
-  - component: {fileID: 770776917}
+  - component: {fileID: 770776918}
   m_Layer: 0
   m_Name: -----GameManager-----
   m_TagString: Untagged
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   - {fileID: 1968737563}
   - {fileID: 1029564087}
   - {fileID: 519721387}
---- !u!114 &770776917
+--- !u!114 &770776918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2018,12 +2018,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 770776911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a45b872bb757f114bad0b6abcd83e5b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c83d7c49cdd534ba6d2cffd8afd387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCompleteLevel: 600
-  timer: {fileID: 1999151011}
-  levelCompletePanel: {fileID: 1601134542}
+  winMessagePanel: {fileID: 1601134542}
+  dataContainer: {fileID: 11400000, guid: 2ee7df512aa73364cb6faa1c21e0c72f, type: 2}
 --- !u!1 &818681844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,7 +5154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d1e589bd393884382fac5630619173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
 --- !u!114 &1999151012
 MonoBehaviour:
   m_ObjectHideFlags: 0

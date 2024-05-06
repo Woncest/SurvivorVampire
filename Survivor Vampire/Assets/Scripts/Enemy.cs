@@ -77,7 +77,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     internal void UpdateStatsForProgress(float progress)
     {
-        Debug.Log("Applying Progress: " + progress);
         stats.ApplyProgress(progress);
     }
 }
