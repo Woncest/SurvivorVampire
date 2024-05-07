@@ -56,6 +56,7 @@ public class WorldScroll : MonoBehaviour
                 Vector3 newPosition = CalculateTilePosition(playerTilePosition.x + pov_x, playerTilePosition.y + pov_y);
                 if(newPosition != tile.transform.position){
                     //Save Objects that were on the tile, Obstacles if randomly generated
+                    obstaclePlacer.PlaceObstacles(tile);
                     tile.transform.position = newPosition;
                     terrainTiles[tileToUpdate_x,tileToUpdate_y].GetComponent<TerrainTile>().Spawn();
                 }

@@ -5,10 +5,14 @@ using UnityEngine;
 public class ObstaclePlacer : MonoBehaviour
 {
     public List<GameObject> obstaclePrefabs; // List of obstacle prefabs
+    private Dictionary<GameObject, List<GameObject>> tileObstacleMap = new Dictionary<GameObject, List<GameObject>>(); // Dictionary to map tiles to obstacles
 
     // Function to place obstacles on a tile
     public void PlaceObstacles(GameObject tile)
     {
+        // Remove existing obstacles if any
+        RemoveObstacles(tile);
+
         // Get the position of the tile
         Vector3 position = tile.transform.position;
 
@@ -32,5 +36,25 @@ public class ObstaclePlacer : MonoBehaviour
         // Instantiate the obstacles
         GameObject leftObstacle = Instantiate(obstacle1, leftPos, Quaternion.identity, tile.transform);
         GameObject rightObstacle = Instantiate(obstacle2, rightPos, Quaternion.identity, tile.transform);
+
+        // Add the obstacles to the dictionary
+        List<GameObject> obstacles = new List<GameObject>();
+        obstacles.Add(leftObstacle);
+        obstacles.Add(rightObstacle);
+        tileObstacleMap[tile] = obstacles;
+    }
+
+    // Function to remove obstacles from a tile
+    private void RemoveObstacles(GameObject tile)
+    {
+        if (tileObstacleMap.ContainsKey(tile))
+        {
+            List<GameObject> obstacles = tileObstacleMap[tile];
+            foreach (GameObject obstacle in obstacles)
+            {
+                Destroy(obstacle);
+            }
+            tileObstacleMap.Remove(tile);
+        }
     }
 }
