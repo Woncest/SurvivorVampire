@@ -11,6 +11,7 @@ public class WorldScroll : MonoBehaviour
     Vector2Int onTileGridPlayerPosition;
     [SerializeField] float tileSize = 20f;
     GameObject[,] terrainTiles;
+    ObstaclePlacer obstaclePlacer;
 
     [SerializeField] int terrainTileHorizontalCount;
     [SerializeField] int terrainTileVerticalCount;
@@ -19,6 +20,7 @@ public class WorldScroll : MonoBehaviour
 
     private void Awake(){
         terrainTiles = new GameObject[terrainTileHorizontalCount, terrainTileVerticalCount];
+        obstaclePlacer = GetComponent<ObstaclePlacer>();
     }
 
     private void Start(){
@@ -53,6 +55,7 @@ public class WorldScroll : MonoBehaviour
                 GameObject tile = terrainTiles[tileToUpdate_x, tileToUpdate_y];
                 Vector3 newPosition = CalculateTilePosition(playerTilePosition.x + pov_x, playerTilePosition.y + pov_y);
                 if(newPosition != tile.transform.position){
+                    //Save Objects that were on the tile, Obstacles if randomly generated
                     tile.transform.position = newPosition;
                     terrainTiles[tileToUpdate_x,tileToUpdate_y].GetComponent<TerrainTile>().Spawn();
                 }
@@ -91,5 +94,6 @@ public class WorldScroll : MonoBehaviour
     public void Add(GameObject tileGameObject, Vector2Int tilePositon)
     {   
         terrainTiles[tilePositon.x, tilePositon.y] = tileGameObject;
+        obstaclePlacer.PlaceObstacles(tileGameObject.transform.position, tileGameObject);
     }
 }

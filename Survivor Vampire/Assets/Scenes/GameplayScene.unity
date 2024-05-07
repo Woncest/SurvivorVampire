@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.656445
@@ -194,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -406,6 +410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogStump1
       objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -545,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -566,6 +578,10 @@ PrefabInstance:
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_Name
       value: Tree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -664,6 +680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log1
       objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -738,6 +758,7 @@ GameObject:
   - component: {fileID: 362067888}
   - component: {fileID: 362067889}
   - component: {fileID: 362067890}
+  - component: {fileID: 362067891}
   m_Layer: 0
   m_Name: ---------World---------
   m_TagString: Untagged
@@ -827,6 +848,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19c510e1e768524d9464aa86d027bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &362067891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362067885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0769d748519b141b0e62edbef25221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclesToPlace:
+  - {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+  - {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+  - {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+  - {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+  - {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &373521791
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log1
       objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1012,6 +1058,10 @@ PrefabInstance:
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_Name
       value: Log1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1149,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1167,6 +1217,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1389,6 +1443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogStump1
       objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1445,6 +1503,10 @@ PrefabInstance:
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_Name
       value: Log1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1505,7 +1567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1610,6 +1672,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1754,6 +1820,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2135,6 +2205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2151,6 +2225,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2208,6 +2286,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2398,6 +2480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogStump1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2414,6 +2500,10 @@ PrefabInstance:
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_Name
       value: Tree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2474,7 +2564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2773,6 +2863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2981,6 +3075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fountain1
       objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.0365705
@@ -3142,6 +3240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.305735
@@ -3238,6 +3340,10 @@ PrefabInstance:
     - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
       propertyPath: m_Name
       value: LogStump1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3392,6 +3498,10 @@ PrefabInstance:
     - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
       propertyPath: m_Name
       value: GraveStone1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3716,7 +3826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3822,7 +3932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3925,7 +4035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4111,6 +4221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4188,6 +4302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4245,6 +4363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log1
       objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4301,6 +4423,10 @@ PrefabInstance:
     - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
       propertyPath: m_Name
       value: GraveStone1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4361,7 +4487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4419,6 +4545,10 @@ PrefabInstance:
     - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
       propertyPath: m_Name
       value: Log1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4712,6 +4842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.178062
@@ -4809,6 +4943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogStump1
       objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4866,6 +5004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4885,7 +5027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648885353097596264, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4993,6 +5135,10 @@ PrefabInstance:
     - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
       propertyPath: m_Name
       value: LogStump1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5133,6 +5279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log1
       objectReference: {fileID: 0}
+    - target: {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5272,6 +5422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone1
       objectReference: {fileID: 0}
+    - target: {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5288,6 +5442,10 @@ PrefabInstance:
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_Name
       value: Fountain1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5351,6 +5509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fountain1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.784525
@@ -5410,7 +5572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175901617749574021, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
       propertyPath: m_LocalPosition.x
