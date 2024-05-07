@@ -860,15 +860,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0769d748519b141b0e62edbef25221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclesToPlace:
+  obstaclePrefabs:
   - {fileID: 2296371245445733669, guid: bc62ba6b797e6904da6d5745b0bbf505, type: 3}
   - {fileID: 6025595307545017877, guid: 425ad9099971b7741a830dab9d0d3e57, type: 3}
   - {fileID: 9011068882478326499, guid: 68dc0ceb9224f504cb2ced00b343f583, type: 3}
   - {fileID: 7408788307063123614, guid: 031febe7cdcd84d47a74da97ac83a23c, type: 3}
   - {fileID: 3526672512127200061, guid: c0dbcb0e48ce96f41b6e7692939f05ac, type: 3}
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &373521791
 GameObject:
   m_ObjectHideFlags: 0

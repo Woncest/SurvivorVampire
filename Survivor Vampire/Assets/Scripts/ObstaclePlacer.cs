@@ -1,65 +1,36 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstaclePlacer : MonoBehaviour
 {
-    public List<GameObject> obstaclesToPlace;
-    public LayerMask collisionLayer;
+    public List<GameObject> obstaclePrefabs; // List of obstacle prefabs
 
-    public void PlaceObstacles(Vector3 tilePosition, GameObject tileObject = null)
+    // Function to place obstacles on a tile
+    public void PlaceObstacles(GameObject tile)
     {
-        foreach (Vector3 offset in GetRandomOffsets(2))
-        {
-            Vector3 obstaclePosition = tilePosition + offset;
-            GameObject obstaclePrefab = obstaclesToPlace[Random.Range(0, obstaclesToPlace.Count)];
-            GameObject placedObstacle = Instantiate(obstaclePrefab, obstaclePosition, Quaternion.identity);
+        // Get the position of the tile
+        Vector3 position = tile.transform.position;
 
-            // Check for collisions and reposition the object if needed
-            while (Physics.CheckBox(placedObstacle.transform.position, Vector3.one / 2f, Quaternion.identity))
-            {
-                Collider[] colliders = Physics.OverlapBox(placedObstacle.transform.position, Vector3.one / 2f, Quaternion.identity);
-                foreach (Collider collider in colliders)
-                {
-                    if (collider.CompareTag("Obstacle"))
-                    {
-                        Debug.Log("Had to change position due to overlap");
-                        if (tileObject != null)
-                        {
-                            Bounds tileBounds = tileObject.GetComponent<Renderer>().bounds;
-                            float minX = tileBounds.min.x;
-                            float maxX = tileBounds.max.x;
-                            float minZ = tileBounds.min.z;
-                            float maxZ = tileBounds.max.z;
+        // Get the bounds of the tile
+        Bounds tileBounds = tile.GetComponent<Renderer>().bounds;
 
-                            Vector3 newPosition = placedObstacle.transform.position;
-                            newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
-                            newPosition.z = Mathf.Clamp(newPosition.z, minZ, maxZ);
-                            placedObstacle.transform.position = newPosition;
+        // Calculate the position for the left half obstacle with some randomness
+        float leftX = Random.Range(tileBounds.min.x + (tileBounds.size.x * 0.25f), tileBounds.center.x);
+        float leftY = Random.Range(tileBounds.min.y, tileBounds.max.y);
+        Vector3 leftPos = new Vector3(leftX, leftY, position.z);
 
-                            if (newPosition == placedObstacle.transform.position)
-                            {
-                                break; // If the object is no longer colliding and is within the tile bounds, exit the loop
-                            }
-                        }
-                        else
-                        {
-                            placedObstacle.transform.position += Vector3.up; // Move the object up by one unit
-                        }
-                    }
-                }
-            }
-        }
-    }
+        // Calculate the position for the right half obstacle with some randomness
+        float rightX = Random.Range(tileBounds.center.x, tileBounds.max.x - (tileBounds.size.x * 0.25f));
+        float rightY = Random.Range(tileBounds.min.y, tileBounds.max.y);
+        Vector3 rightPos = new Vector3(rightX, rightY, position.z);
 
-    private IEnumerable<Vector3> GetRandomOffsets(int count)
-    {
-        List<Vector3> offsets = new List<Vector3>();
-        for (int i = 0; i < count; i++)
-        {
-            float offsetX = Random.Range(0f, 1f);
-            float offsetZ = Random.Range(0f, 1f);
-            offsets.Add(new Vector3(offsetX, 0f, offsetZ));
-        }
-        return offsets;
+        // Choose two random obstacles from the list
+        GameObject obstacle1 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+        GameObject obstacle2 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+
+        // Instantiate the obstacles
+        GameObject leftObstacle = Instantiate(obstacle1, leftPos, Quaternion.identity, tile.transform);
+        GameObject rightObstacle = Instantiate(obstacle2, rightPos, Quaternion.identity, tile.transform);
     }
 }
