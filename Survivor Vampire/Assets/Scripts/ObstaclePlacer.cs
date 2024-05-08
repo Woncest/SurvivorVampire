@@ -20,28 +20,63 @@ public class ObstaclePlacer : MonoBehaviour
         Bounds tileBounds = tile.GetComponent<Renderer>().bounds;
 
         // Calculate the position for the left half obstacle with some randomness
-        float leftX = Random.Range(tileBounds.min.x + (tileBounds.size.x * 0.25f), tileBounds.center.x);
-        float leftY = Random.Range(tileBounds.min.y, tileBounds.max.y);
-        Vector3 leftPos = new Vector3(leftX, leftY, position.z);
+        Vector3 leftPos = CalculatePosition(tileBounds.min.x + (tileBounds.size.x * 0.25f), tileBounds.center.x, tileBounds.min.y, tileBounds.max.y, position.z);
 
         // Calculate the position for the right half obstacle with some randomness
-        float rightX = Random.Range(tileBounds.center.x, tileBounds.max.x - (tileBounds.size.x * 0.25f));
-        float rightY = Random.Range(tileBounds.min.y, tileBounds.max.y);
-        Vector3 rightPos = new Vector3(rightX, rightY, position.z);
+        Vector3 rightPos = CalculatePosition(tileBounds.center.x, tileBounds.max.x - (tileBounds.size.x * 0.25f), tileBounds.min.y, tileBounds.max.y, position.z);
 
         // Choose two random obstacles from the list
         GameObject obstacle1 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
         GameObject obstacle2 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
 
-        // Instantiate the obstacles
-        GameObject leftObstacle = Instantiate(obstacle1, leftPos, Quaternion.identity, tile.transform);
-        GameObject rightObstacle = Instantiate(obstacle2, rightPos, Quaternion.identity, tile.transform);
+        // Instantiate the obstacles, ensuring they don't collide with existing obstacles
+        GameObject leftObstacle = InstantiateWithCollisionCheck(obstacle1, leftPos, tile.transform);
+        GameObject rightObstacle = InstantiateWithCollisionCheck(obstacle2, rightPos, tile.transform);
 
         // Add the obstacles to the dictionary
         List<GameObject> obstacles = new List<GameObject>();
         obstacles.Add(leftObstacle);
         obstacles.Add(rightObstacle);
         tileObstacleMap[tile] = obstacles;
+    }
+
+    // Function to calculate position with bias towards the center
+    private Vector3 CalculatePosition(float min, float max, float minY, float maxY, float zPos)
+    {
+        // Calculate a random position within the allowed area with bias towards the center
+        float rand = Random.Range(0f, 1f);
+        float center = (min + max) / 2;
+        float positionX;
+        if (rand < 0.5f)
+        {
+            // Closer to the center
+            positionX = Mathf.Lerp(center, max, Random.Range(0f, 1f));
+        }
+        else
+        {
+            // Closer to the min or max edge
+            positionX = Mathf.Lerp(min, center, Random.Range(0f, 1f));
+        }
+
+        float positionY = Random.Range(minY, maxY);
+
+        return new Vector3(positionX, positionY, zPos);
+    }
+
+    // Function to instantiate an obstacle with collision check
+    private GameObject InstantiateWithCollisionCheck(GameObject obstaclePrefab, Vector3 position, Transform parent)
+    {
+        // Check if there's already an obstacle at the intended position
+        Collider2D collider = Physics2D.OverlapBox(position, obstaclePrefab.GetComponent<Renderer>().bounds.size, 0);
+        if (collider != null && collider.CompareTag("Obstacle"))
+        {
+            return null; // Don't instantiate obstacle if there's already one in the way
+        }
+
+        // Instantiate the obstacle
+        GameObject obstacle = Instantiate(obstaclePrefab, position, Quaternion.identity, parent);
+        obstacle.GetComponent<Collider2D>().isTrigger = false; // Ensure isTrigger is false
+        return obstacle;
     }
 
     // Function to remove obstacles from a tile

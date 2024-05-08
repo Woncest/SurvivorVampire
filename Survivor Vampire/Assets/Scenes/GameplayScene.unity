@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 188639725}
   m_Layer: 0
   m_Name: ColliderForWater (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 373521793}
   m_Layer: 0
   m_Name: ColliderForWater (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 392562223}
   m_Layer: 0
   m_Name: ColliderForWater
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1583,7 +1583,7 @@ GameObject:
   - component: {fileID: 591628143}
   m_Layer: 0
   m_Name: ColliderForWater (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1923,7 +1923,7 @@ GameObject:
   - component: {fileID: 683564607}
   m_Layer: 0
   m_Name: ColliderForWater (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 837586448}
   m_Layer: 0
   m_Name: ColliderForWater (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 974742566}
   m_Layer: 0
   m_Name: ColliderForWater
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2990,7 +2990,7 @@ GameObject:
   - component: {fileID: 1108353983}
   m_Layer: 0
   m_Name: ColliderForWater (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3379,7 +3379,7 @@ GameObject:
   - component: {fileID: 1337864515}
   m_Layer: 0
   m_Name: ColliderForWater (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3522,7 +3522,7 @@ GameObject:
   - component: {fileID: 1370194185}
   m_Layer: 0
   m_Name: ColliderForWater (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3953,7 +3953,7 @@ GameObject:
   - component: {fileID: 1552852682}
   m_Layer: 0
   m_Name: ColliderForWater (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4101,7 +4101,7 @@ GameObject:
   - component: {fileID: 1584857303}
   m_Layer: 0
   m_Name: ColliderForWater
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4685,7 +4685,7 @@ GameObject:
   - component: {fileID: 1722771098}
   m_Layer: 0
   m_Name: ColliderForWater (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4762,7 +4762,7 @@ GameObject:
   - component: {fileID: 1753214041}
   m_Layer: 0
   m_Name: ColliderForWater (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5154,7 +5154,7 @@ GameObject:
   - component: {fileID: 1922405295}
   m_Layer: 0
   m_Name: ColliderForWater
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5297,7 +5297,7 @@ GameObject:
   - component: {fileID: 1980799300}
   m_Layer: 0
   m_Name: ColliderForWater (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
