@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ObstaclePlacer : MonoBehaviour
@@ -31,7 +32,9 @@ public class ObstaclePlacer : MonoBehaviour
 
         // Instantiate the obstacles, ensuring they don't collide with existing obstacles
         GameObject leftObstacle = InstantiateWithCollisionCheck(obstacle1, leftPos, tile.transform);
+        CheckIfLeftObstaclePlaced(tile, position, ref tileBounds, ref leftPos, ref obstacle1, ref leftObstacle);
         GameObject rightObstacle = InstantiateWithCollisionCheck(obstacle2, rightPos, tile.transform);
+        CheckIfRightObstaclePlaced(tile, position, tileBounds, ref rightPos, ref obstacle2, ref rightObstacle);
 
         // Add the obstacles to the dictionary
         List<GameObject> obstacles = new List<GameObject>();
@@ -70,7 +73,6 @@ public class ObstaclePlacer : MonoBehaviour
         Collider2D collider = Physics2D.OverlapBox(position, obstaclePrefab.GetComponent<Renderer>().bounds.size, 0);
         if (collider != null && collider.CompareTag("Obstacle"))
         {
-            Debug.Log("Did not Instantiate");
             return null; // Don't instantiate obstacle if there's already one in the way
         }
 
@@ -91,6 +93,26 @@ public class ObstaclePlacer : MonoBehaviour
                 Destroy(obstacle);
             }
             tileObstacleMap.Remove(tile);
+        }
+    }
+
+    private void CheckIfLeftObstaclePlaced(GameObject tile, Vector3 position, ref Bounds tileBounds, ref Vector3 leftPos, ref GameObject obstacle1, ref GameObject leftObstacle)
+    {
+        while (leftObstacle == null)
+        {
+            obstacle1 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+            leftPos = CalculatePosition(tileBounds.min.x + (tileBounds.size.x * 0.25f), tileBounds.center.x, tileBounds.min.y, tileBounds.max.y, position.z);
+            leftObstacle = InstantiateWithCollisionCheck(obstacle1, leftPos, tile.transform);
+        }
+    }
+
+    private void CheckIfRightObstaclePlaced(GameObject tile, Vector3 position, Bounds tileBounds, ref Vector3 rightPos, ref GameObject obstacle2, ref GameObject rightObstacle)
+    {
+        while (rightObstacle == null)
+        {
+            obstacle2 = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+            rightPos = CalculatePosition(tileBounds.center.x, tileBounds.max.x - (tileBounds.size.x * 0.25f), tileBounds.min.y, tileBounds.max.y, position.z);
+            rightObstacle = InstantiateWithCollisionCheck(obstacle2, rightPos, tile.transform);
         }
     }
 }
