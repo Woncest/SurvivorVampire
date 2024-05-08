@@ -25,6 +25,7 @@ public class UpgradePanelManager : MonoBehaviour
 
         for(int i = 0; i < upgrades.Count; i++){
             upgradeButtons[i].gameObject.SetActive(true);
+            upgradeButtons[i].text.gameObject.SetActive(true);
             upgradeButtons[i].Set(upgrades[i]);
         }
     }

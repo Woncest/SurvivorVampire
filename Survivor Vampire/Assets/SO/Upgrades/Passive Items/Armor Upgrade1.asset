@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 1
   upgradeName: Armor Upgrade
+  description: Gain 2 additional Armor
   icon: {fileID: -237735265, guid: ce6e98ba543241c44a438b5d9d5d14d0, type: 3}
   weaponData: {fileID: 0}
   weaponUpgradeStats:

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 3
   upgradeName: test
+  description: Unlock Armor. Reduces Damage
   icon: {fileID: -237735265, guid: ce6e98ba543241c44a438b5d9d5d14d0, type: 3}
   weaponData: {fileID: 0}
   weaponUpgradeStats:
@@ -21,3 +22,5 @@ MonoBehaviour:
     timeToAttack: 0
     numberOfAttacks: 0
   item: {fileID: 11400000, guid: c3f14cf57a2ad0441bb9893eac74e44e, type: 2}
+  itemStats:
+    armor: 0
