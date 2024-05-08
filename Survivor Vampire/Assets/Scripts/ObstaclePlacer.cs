@@ -70,6 +70,7 @@ public class ObstaclePlacer : MonoBehaviour
         Collider2D collider = Physics2D.OverlapBox(position, obstaclePrefab.GetComponent<Renderer>().bounds.size, 0);
         if (collider != null && collider.CompareTag("Obstacle"))
         {
+            Debug.Log("Did not Instantiate");
             return null; // Don't instantiate obstacle if there's already one in the way
         }
 

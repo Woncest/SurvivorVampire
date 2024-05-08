@@ -95,6 +95,5 @@ public class WorldScroll : MonoBehaviour
     public void Add(GameObject tileGameObject, Vector2Int tilePositon)
     {   
         terrainTiles[tilePositon.x, tilePositon.y] = tileGameObject;
-        obstaclePlacer.PlaceObstacles(tileGameObject);
     }
 }
