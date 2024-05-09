@@ -28,6 +28,9 @@ public class StageEventManager : MonoBehaviour
                 case StageEventType.SpawnEnemy:
                     SpawnEnemies();
                     break;
+                case StageEventType.SpawnEnemyBoss:
+                    SpawnEnemyBoss();
+                    break;
                 case StageEventType.SpawnObject:
                     SpawnObjects();
                     break;
@@ -40,6 +43,14 @@ public class StageEventManager : MonoBehaviour
         }
     }
 
+    private void SpawnEnemyBoss()
+    {
+        for (int i = 0; i < stageSO.events[eventIndexer].count; i++)
+        {
+            enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn, true);
+        }
+    }
+
     private void WinStage()
     {
         playerWin.Win();
@@ -49,7 +60,7 @@ public class StageEventManager : MonoBehaviour
     {
         for (int i = 0; i < stageSO.events[eventIndexer].count; i++)
         {
-            enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn);
+            enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn, false);
         }
     }
 
