@@ -1,23 +1,45 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+
+public class EnemiesSpawnGroup{
+    public EnemySO enemySO;
+    public int count;
+    public bool isBoss;
+
+    public float repeatTimer;
+    public float timeBetweenSpawn;
+
+    public EnemiesSpawnGroup(EnemySO enemySO, int count, bool isBoss){
+        this.enemySO = enemySO;
+        this.count = count;
+        this.isBoss = isBoss;
+    }
+
+    public void SetRepeatSpawn(float timeBetweenSpawn){
+        this.timeBetweenSpawn = timeBetweenSpawn;
+        repeatTimer = timeBetweenSpawn;
+    }
+
+}
 
 public class EnemiesManager : MonoBehaviour
 {
     [SerializeField] StageProgress stageProgress;
     [SerializeField] GameObject enemy;
-    [SerializeField] EnemySO enemyAnimation;
     [SerializeField] Vector2 spawnArea;
-    [SerializeField] float spawnTimer;
     GameObject target;
-    float timer;
 
     List<Enemy> bossEnemiesList;
     float totalBossHealth;
     float currentBossHealth;
     [SerializeField] Slider bossHealthBar;
+
+    List<EnemiesSpawnGroup> enemiesSpawnGroupList;
+    List<EnemiesSpawnGroup> repeatedSpawnGroupList;
 
     private void Start(){
         target = GameManager.instance.playerTransform.gameObject;
@@ -25,10 +47,8 @@ public class EnemiesManager : MonoBehaviour
     }
 
     private void Update(){
-        timer -= Time.deltaTime;
-        if (timer < 0){
-            SpawnEnemy(enemyAnimation, false);
-        }
+        ProcessSpawn();
+        ProcessRepeatedSpawnGroups();
         UpdateBossHealth();
     }
 
@@ -53,6 +73,14 @@ public class EnemiesManager : MonoBehaviour
         }
     }
 
+    public void AddGroupToSpawn(EnemySO enemyToSpawn, int count, bool isBoss){
+        EnemiesSpawnGroup newGroupToSpawn = new EnemiesSpawnGroup(enemyToSpawn, count, isBoss);
+
+        if (enemiesSpawnGroupList == null) { enemiesSpawnGroupList = new List<EnemiesSpawnGroup>(); }
+
+        enemiesSpawnGroupList.Add(newGroupToSpawn);
+    }
+
     public void SpawnEnemy(EnemySO enemyToSpawn, bool isBoss)
     {
         Vector3 positon = UtilityTools.GenerateRandomPosition(spawnArea);
@@ -68,7 +96,6 @@ public class EnemiesManager : MonoBehaviour
         newEnemyComponent.SetStats(enemyToSpawn.stats);
         newEnemyComponent.UpdateStatsForProgress(stageProgress.Progress);
         newEnemy.transform.parent = transform;
-        timer = spawnTimer;
 
         if(isBoss){
             SpawnEnemyBoss(newEnemyComponent);
@@ -90,5 +117,44 @@ public class EnemiesManager : MonoBehaviour
 
         bossHealthBar.gameObject.SetActive(true);
         bossHealthBar.maxValue = totalBossHealth;
+    }
+
+    private void ProcessSpawn()
+    {
+        if (enemiesSpawnGroupList == null) { return; }
+
+        if (enemiesSpawnGroupList.Count > 0){
+            SpawnEnemy(enemiesSpawnGroupList[0].enemySO, enemiesSpawnGroupList[0].isBoss);
+            enemiesSpawnGroupList[0].count--;
+
+            if(enemiesSpawnGroupList[0].count <= 0){
+                enemiesSpawnGroupList.RemoveAt(0);
+            }
+        }
+    }
+
+    private void ProcessRepeatedSpawnGroups()
+    {
+        if (repeatedSpawnGroupList == null) { return; }
+
+        for (int i = 0; i < repeatedSpawnGroupList.Count; i++){
+            repeatedSpawnGroupList[i].repeatTimer -= Time.deltaTime;
+            if(repeatedSpawnGroupList[i].repeatTimer < 0){
+                repeatedSpawnGroupList[i].repeatTimer = repeatedSpawnGroupList[i].timeBetweenSpawn;
+                AddGroupToSpawn(repeatedSpawnGroupList[i].enemySO, repeatedSpawnGroupList[i].count, repeatedSpawnGroupList[i].isBoss);
+            }
+        }
+    }
+
+    public void AddRepeatedSpawn(StageEvent stageEvent, bool isBoss)
+    {
+        EnemiesSpawnGroup repeatSpawnGroup = new EnemiesSpawnGroup(stageEvent.enemyToSpawn, stageEvent.count, isBoss);
+        repeatSpawnGroup.SetRepeatSpawn(stageEvent.repeatedEverySeconds);
+
+        if(repeatedSpawnGroupList == null){
+            repeatedSpawnGroupList = new List<EnemiesSpawnGroup>();
+        }
+
+        repeatedSpawnGroupList.Add(repeatSpawnGroup);
     }
 }

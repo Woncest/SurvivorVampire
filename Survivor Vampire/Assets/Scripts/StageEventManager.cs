@@ -26,10 +26,10 @@ public class StageEventManager : MonoBehaviour
 
             switch(stageSO.events[eventIndexer].eventType){
                 case StageEventType.SpawnEnemy:
-                    SpawnEnemies();
+                    SpawnEnemies(false);
                     break;
                 case StageEventType.SpawnEnemyBoss:
-                    SpawnEnemyBoss();
+                    SpawnEnemies(true);
                     break;
                 case StageEventType.SpawnObject:
                     SpawnObjects();
@@ -43,24 +43,18 @@ public class StageEventManager : MonoBehaviour
         }
     }
 
-    private void SpawnEnemyBoss()
-    {
-        for (int i = 0; i < stageSO.events[eventIndexer].count; i++)
-        {
-            enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn, true);
-        }
-    }
-
     private void WinStage()
     {
         playerWin.Win();
     }
 
-    private void SpawnEnemies()
+    private void SpawnEnemies(bool boss)
     {
-        for (int i = 0; i < stageSO.events[eventIndexer].count; i++)
-        {
-            enemiesManager.SpawnEnemy(stageSO.events[eventIndexer].enemyToSpawn, false);
+        StageEvent currentEvent = stageSO.events[eventIndexer];
+        enemiesManager.AddGroupToSpawn(currentEvent.enemyToSpawn, currentEvent.count, boss);
+
+        if(currentEvent.isRepeatedEvent){
+            enemiesManager.AddRepeatedSpawn(currentEvent, false);
         }
     }
 

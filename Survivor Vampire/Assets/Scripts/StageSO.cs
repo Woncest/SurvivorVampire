@@ -20,6 +20,9 @@ public class StageEvent{
     public EnemySO enemyToSpawn;
     public GameObject objectToSpawn;
     public int count;
+
+    public bool isRepeatedEvent;
+    public float repeatedEverySeconds;
 }
 
 [CreateAssetMenu]
