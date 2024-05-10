@@ -155,6 +155,9 @@ public class EnemiesManager : MonoBehaviour
             repeatedSpawnGroupList = new List<EnemiesSpawnGroup>();
         }
 
+        if(repeatedSpawnGroupList.Count >= 2){
+            repeatedSpawnGroupList.RemoveAt(0);
+        }
         repeatedSpawnGroupList.Add(repeatSpawnGroup);
     }
 }
