@@ -29,6 +29,18 @@ public abstract class WeaponBase : MonoBehaviour
 
     public abstract void Attack();
 
+    public void ApplyDamage(Collider2D[] colliders)
+    {
+        float damage = GetDamage();
+        foreach (Collider2D collider in colliders){
+            IDamageable i = collider.gameObject.GetComponentInParent<IDamageable>();
+            if(i != null){
+                PostDamage(damage, collider.transform.position);
+                i.TakeDamage(damage);
+            }
+        }
+    }
+
     public float GetDamage(){
         float damage = weaponStats.damage * character.damageBonus;
         return damage;

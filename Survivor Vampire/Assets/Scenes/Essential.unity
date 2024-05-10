@@ -4187,6 +4187,7 @@ MonoBehaviour:
   upgradePanelManager: {fileID: 770776916}
   upgrades:
   - {fileID: 11400000, guid: 4995b516af3ee9d4f97f78e028ee1a84, type: 2}
+  - {fileID: 11400000, guid: d71aab75cdf64ee41bfac88cae1bfbc3, type: 2}
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
 --- !u!114 &1480659909
