@@ -12,6 +12,7 @@ public enum PersistentUpgrades{
 public class PlayerUpgrade{
     public PersistentUpgrades persistentUpgrades;
     public int level = 0;
+    public int maxLevel = 10;
     public int costToUpgrade;
 }
 
@@ -26,5 +27,10 @@ public class DataContainerSO : ScriptableObject
 
     public void StageCompletion(int i){
         stageCompletion[i] = true;
+    }
+
+    internal int GetUpgradeLevel(PersistentUpgrades upgrade)
+    {
+        return upgrades[(int)upgrade].level;
     }
 }

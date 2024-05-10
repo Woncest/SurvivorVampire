@@ -11,6 +11,8 @@ public abstract class WeaponBase : MonoBehaviour
 
     float timer;
 
+    Character character;
+
     public void Update(){
         timer -= Time.deltaTime;
         if (timer < 0){
@@ -27,6 +29,11 @@ public abstract class WeaponBase : MonoBehaviour
 
     public abstract void Attack();
 
+    public float GetDamage(){
+        float damage = weaponStats.damage * character.damageBonus;
+        return damage;
+    }
+
     public virtual void PostDamage(float damage, Vector3 targetPosition){
         MessageSystem.instance.PostMessage(damage.ToString(), targetPosition);
     }
@@ -34,5 +41,10 @@ public abstract class WeaponBase : MonoBehaviour
     public void Upgrade(UpgradesSO upgrade)
     {
         weaponStats.Sum(upgrade.weaponUpgradeStats);
+    }
+
+    public void AddCharacter(Character character)
+    {
+        this.character = character;
     }
 }

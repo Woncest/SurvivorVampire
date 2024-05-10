@@ -20,6 +20,8 @@ public class PlayerUpgradeUIElement : MonoBehaviour
     public void Upgrade(){
         PlayerUpgrade playerUpgrade = dataContainer.upgrades[(int) upgrade];
 
+        if (playerUpgrade.level >= playerUpgrade.maxLevel) { return; }
+
         if(dataContainer.coins >= playerUpgrade.costToUpgrade){
             dataContainer.coins -= playerUpgrade.costToUpgrade;
             playerUpgrade.level++;

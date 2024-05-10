@@ -25,7 +25,7 @@ public class ThrowingKnife : WeaponBase
             thrownKnife.transform.position = newKnifePosition;
             ThrowingKnifeProjectile throwingKnifeProjectile = thrownKnife.GetComponent<ThrowingKnifeProjectile>();
             throwingKnifeProjectile.SetDirection(playerMove.lastHorizontalVector, 0f);
-            throwingKnifeProjectile.damage = weaponStats.damage;
+            throwingKnifeProjectile.damage = GetDamage();
         }
     }
 }

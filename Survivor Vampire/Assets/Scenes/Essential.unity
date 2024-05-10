@@ -4166,9 +4166,11 @@ MonoBehaviour:
   currentHP: 1000
   armor: 0
   hpRegenerationRate: 1
+  damageBonus: 0
   hpBar: {fileID: 33264067}
   level: {fileID: 0}
   coins: {fileID: 0}
+  dataContainer: {fileID: 11400000, guid: 2ee7df512aa73364cb6faa1c21e0c72f, type: 2}
 --- !u!114 &1480659908
 MonoBehaviour:
   m_ObjectHideFlags: 0
