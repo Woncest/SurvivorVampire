@@ -9,7 +9,7 @@ public abstract class WeaponBase : MonoBehaviour
 
     public WeaponStats weaponStats;
 
-    public float timer;
+    public float timer {get; set;}
 
     Character character;
 
