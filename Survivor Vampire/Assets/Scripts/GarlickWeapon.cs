@@ -13,4 +13,13 @@ public class GarlickWeapon : WeaponBase
             ApplyDamage(colliders);
         }
     }
+
+    public new virtual void Update(){
+        timer -= Time.deltaTime;
+        if (timer < 0){
+            Attack();
+            timer = weaponStats.timeToAttack;
+        }
+        transform.position = GameManager.instance.playerTransform.position;
+    }
 }
