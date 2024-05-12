@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeName: Armor Upgrade
   description: Gain 2 additional Armor
-  icon: {fileID: -237735265, guid: ce6e98ba543241c44a438b5d9d5d14d0, type: 3}
+  icon: {fileID: 21300000, guid: ec6b44b90ccb28b4cb229e98eefa300a, type: 3}
   weaponData: {fileID: 0}
   weaponUpgradeStats:
     damage: 0

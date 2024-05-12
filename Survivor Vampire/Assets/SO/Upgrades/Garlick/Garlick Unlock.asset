@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeName: Garlick Unlock
   description: Unlocks Garlick Weapon which damages nearby Enemies
-  icon: {fileID: 561217052, guid: 62a4c3fd3d1d3c44ab48e2494da62f31, type: 3}
+  icon: {fileID: -1111556851, guid: 6e5fb3c5370706042bf21aa467e6e1fe, type: 3}
   weaponData: {fileID: 11400000, guid: 578b150e6a1243048a1321a0442bcb28, type: 2}
   weaponUpgradeStats:
     damage: 0

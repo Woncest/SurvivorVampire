@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 0
   upgradeName: Garlick More Damage
   description: Garlick deals more Damage
-  icon: {fileID: 341418669, guid: ce6e98ba543241c44a438b5d9d5d14d0, type: 3}
+  icon: {fileID: -1275226738, guid: 6e5fb3c5370706042bf21aa467e6e1fe, type: 3}
   weaponData: {fileID: 11400000, guid: 578b150e6a1243048a1321a0442bcb28, type: 2}
   weaponUpgradeStats:
     damage: 1

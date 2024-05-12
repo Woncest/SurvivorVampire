@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 0
   upgradeName: Double Attack
   description: Gain an extra Attack
-  icon: {fileID: 21300000, guid: 3830be23cd264d344a043d87bde7f746, type: 3}
+  icon: {fileID: -1834097030, guid: 71bb4eb237d612244a2c02fef5e139f8, type: 3}
   weaponData: {fileID: 11400000, guid: c21ca1f3197587c46a869592cf3d558c, type: 2}
   weaponUpgradeStats:
     damage: 0
