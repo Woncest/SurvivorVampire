@@ -58,6 +58,8 @@ public class EnemiesManager : MonoBehaviour
             bossHealthBar.gameObject.SetActive(false);
             return;
         }
+        RemoveDeadEnemies();
+        Debug.Log(bossEnemiesList.Count);
         bossHealthBar.gameObject.SetActive(true);
 
         currentBossHealth = 0;
@@ -113,7 +115,7 @@ public class EnemiesManager : MonoBehaviour
 
         bossEnemiesList.Add(newBoss);
 
-        totalBossHealth += newBoss.stats.hp;
+        totalBossHealth += newBoss.stats.hpMax;
 
         bossHealthBar.gameObject.SetActive(true);
         bossHealthBar.maxValue = totalBossHealth;
@@ -159,5 +161,25 @@ public class EnemiesManager : MonoBehaviour
             repeatedSpawnGroupList.RemoveAt(0);
         }
         repeatedSpawnGroupList.Add(repeatSpawnGroup);
+    }
+
+    private void RemoveDeadEnemies()
+    {
+        List<int> indicesToRemove = new List<int>();
+
+        for (int i = 0; i < bossEnemiesList.Count; i++)
+        {
+            if (bossEnemiesList[i].stats.hp == 0)
+            {
+                indicesToRemove.Add(i);
+            }
+        }
+
+        for (int i = indicesToRemove.Count - 1; i >= 0; i--)
+        {
+            int index = indicesToRemove[i];
+            totalBossHealth -= bossEnemiesList[i].stats.hpMax;
+            bossEnemiesList.RemoveAt(index);
+        }
     }
 }
