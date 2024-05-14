@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8344212863153131019}
   - component: {fileID: 9141301555826261772}
   - component: {fileID: 301595600681693569}
+  - component: {fileID: -647012214031165946}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -79,6 +80,7 @@ MonoBehaviour:
     damage: 1
     experience_reward: 100
     speed: 1
+  isBoss: 0
 --- !u!114 &9141301555826261772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810b8fad155543a4fb1f899c9c97144d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-647012214031165946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135981026205642887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f1ea5b3bbf7f04eac50fecba0fcf5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redTrianglePrefab: {fileID: 2637475034417068586, guid: d0aa2e7168cda2647852b23e065bdb1e, type: 3}

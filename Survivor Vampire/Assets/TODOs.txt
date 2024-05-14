@@ -1,5 +1,3 @@
-Red Arrows towards Bosses
-Bosses should be able to walk through Terrain
 More Weapons
 More Enemies
 More Stages

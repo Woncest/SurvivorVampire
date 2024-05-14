@@ -41,6 +41,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public bool isBoss = false;
     private Collider2D bossCollider;
+    private SpriteRenderer spriteRenderer;
+    private BossTracking bossTracking;
 
     private void Awake(){
         rgdbd2d = GetComponent<Rigidbody2D>();
@@ -48,12 +50,23 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Start(){
         bossCollider = GetComponentInChildren<Collider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        bossTracking = GetComponent<BossTracking>();
     }
 
     public void SetTarget(GameObject target){
         targetGameObject = target;
         targetDestionation = target.transform;
         targetCharacter = targetGameObject.GetComponent<Character>();
+    }
+
+    private void Update(){
+        if(isBoss && !spriteRenderer.isVisible){
+            bossTracking.TrackBoss();
+        }
+        if(isBoss && spriteRenderer.isVisible){
+            bossTracking.StopTrackBoss();
+        }
     }
 
     private void FixedUpdate(){
@@ -99,5 +112,9 @@ public class Enemy : MonoBehaviour, IDamageable
     internal void UpdateStatsForProgress(float progress)
     {
         stats.ApplyProgress(progress);
+    }
+
+    private void OnDestroy(){
+        bossTracking.StopTrackBoss();
     }
 }
