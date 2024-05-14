@@ -86,6 +86,10 @@ public class Enemy : MonoBehaviour, IDamageable
         Collider2D otherCollider = collision.collider;
         if (otherCollider != null && otherCollider != bossCollider && collision.gameObject != targetGameObject)
         {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if(enemy != null && enemy.isBoss){
+                return;
+            }
             Physics2D.IgnoreCollision(otherCollider, bossCollider, true);
         }
     }
