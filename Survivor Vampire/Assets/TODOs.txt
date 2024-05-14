@@ -1,3 +1,4 @@
+Bosses respawn when too far from player
 More Weapons
 More Enemies
 More Stages
