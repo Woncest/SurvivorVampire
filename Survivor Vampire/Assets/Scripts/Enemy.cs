@@ -64,10 +64,16 @@ public class Enemy : MonoBehaviour, IDamageable
     private void OnCollisionStay2D(Collision2D coll){
         if(coll.gameObject == targetGameObject){
             Attack();
-            return;
         }
-        if(isBoss){
-            Physics2D.IgnoreCollision(coll.collider, bossCollider, true);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(!isBoss) { return; }
+        Collider2D otherCollider = collision.collider;
+        if (otherCollider != null && otherCollider != bossCollider)
+        {
+            Physics2D.IgnoreCollision(otherCollider, bossCollider, true);
         }
     }
 
