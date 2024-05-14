@@ -39,8 +39,15 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public EnemyStats stats;
 
+    public bool isBoss = false;
+    private Collider2D bossCollider;
+
     private void Awake(){
         rgdbd2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start(){
+        bossCollider = GetComponentInChildren<Collider2D>();
     }
 
     public void SetTarget(GameObject target){
@@ -55,9 +62,12 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     private void OnCollisionStay2D(Collision2D coll){
-        //Only move vertical or horizontal when hitting obstacle
         if(coll.gameObject == targetGameObject){
             Attack();
+            return;
+        }
+        if(isBoss){
+            Physics2D.IgnoreCollision(coll.collider, bossCollider, true);
         }
     }
 

@@ -100,6 +100,7 @@ public class EnemiesManager : MonoBehaviour
         newEnemy.transform.parent = transform;
 
         if(isBoss){
+            newEnemyComponent.isBoss = isBoss;
             SpawnEnemyBoss(newEnemyComponent);
         }
 
