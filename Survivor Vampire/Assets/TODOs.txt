@@ -1,3 +1,4 @@
+Save Objects so that when you go back it looks the same
 Bosses respawn when too far from player
 More Weapons
 More Enemies

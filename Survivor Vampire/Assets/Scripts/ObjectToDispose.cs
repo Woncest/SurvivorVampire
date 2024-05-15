@@ -22,5 +22,10 @@ public class ObjectToDispose : MonoBehaviour
         if(distance > maxDistance && enemy != null && !enemy.isBoss){
             Destroy(gameObject);
         }
+        if(distance > maxDistance && enemy != null && enemy.isBoss){
+            Vector3 positionToSpawn = GameManager.instance.playerTransform.position;
+            positionToSpawn += UtilityTools.GenerateRandomPosition(new Vector2(15f, 10f));
+            enemy.transform.position = positionToSpawn;
+        }
     }
 }
