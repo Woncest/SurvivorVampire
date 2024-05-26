@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressTimeRate: 30
-  progressPerSplit: 0.2
+  progressPerSplit: 0.5
 --- !u!114 &362067890
 MonoBehaviour:
   m_ObjectHideFlags: 0

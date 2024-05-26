@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Garlick
   stats:
-    damage: 1
+    damage: 0.5
     timeToAttack: 1
     numberOfAttacks: 1
   weaponBasePrefab: {fileID: 8581211593779460593, guid: 068bd0c6879e9e645b4d529053c781ee, type: 3}
