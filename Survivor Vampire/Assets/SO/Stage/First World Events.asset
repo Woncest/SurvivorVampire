@@ -13,16 +13,8 @@ MonoBehaviour:
   m_Name: First World Events
   m_EditorClassIdentifier: 
   events:
-  - eventType: 1
-    time: 60
-    message: Winner Winner Chicken Dinner
-    enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
-    objectToSpawn: {fileID: 0}
-    count: 5
-    isRepeatedEvent: 0
-    repeatedEverySeconds: 0
   - eventType: 0
-    time: 61
+    time: 0
     message: Winner Winner Chicken Dinner
     enemyToSpawn: {fileID: 11400000, guid: 6be2e35441b66ba4e9881f1abfd68a75, type: 2}
     objectToSpawn: {fileID: 0}
@@ -30,7 +22,23 @@ MonoBehaviour:
     isRepeatedEvent: 1
     repeatedEverySeconds: 0.5
   - eventType: 1
-    time: 90
+    time: 30
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 0
+    time: 30
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: 6be2e35441b66ba4e9881f1abfd68a75, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 2
+    isRepeatedEvent: 1
+    repeatedEverySeconds: 0.5
+  - eventType: 1
+    time: 60
     message: Winner Winner Chicken Dinner
     enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
     objectToSpawn: {fileID: 0}
