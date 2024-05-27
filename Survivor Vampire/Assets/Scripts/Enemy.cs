@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private Collider2D bossCollider;
     private SpriteRenderer spriteRenderer;
     private BossTracking bossTracking;
+    private StatusBar hpBar;
 
     private void Awake(){
         rgdbd2d = GetComponent<Rigidbody2D>();
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour, IDamageable
         bossCollider = GetComponentInChildren<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         bossTracking = GetComponent<BossTracking>();
+        hpBar = GetComponentInChildren<StatusBar>(true);
     }
 
     public void SetTarget(GameObject target){
@@ -92,6 +94,7 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     public void TakeDamage(float damage){
+        hpBar.gameObject.SetActive(true);
         stats.hp -= damage;
         if(stats.hp < 0){ stats.hp = 0;}
         if(stats.hp <= 0){
@@ -99,6 +102,7 @@ public class Enemy : MonoBehaviour, IDamageable
             GetComponent<DropOnDestroy>().CheckDrop();
             Destroy(gameObject);
         }
+        hpBar.SetState(stats.hp, stats.hpMax);
     }
 
     internal void SetStats(EnemyStats stats)
