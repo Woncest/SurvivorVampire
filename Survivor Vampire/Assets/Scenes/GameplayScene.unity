@@ -360,7 +360,6 @@ GameObject:
   - component: {fileID: 362067887}
   - component: {fileID: 362067886}
   - component: {fileID: 362067888}
-  - component: {fileID: 362067889}
   - component: {fileID: 362067890}
   - component: {fileID: 362067891}
   m_Layer: 0
@@ -426,20 +425,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageSO: {fileID: 11400000, guid: f0e2ff87c8535bf448335289f06f0274, type: 2}
   enemiesManager: {fileID: 701042385}
---- !u!114 &362067889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362067885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f7f43bce3900d4581d9622a2e8aecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressTimeRate: 30
-  progressPerSplit: 0.5
 --- !u!114 &362067890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,7 +1017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a67226d6f34b1949b79c5e0b3f371e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageProgress: {fileID: 362067889}
   enemy: {fileID: 2135981026205642887, guid: 7f247be47acd94148812856f356ed035, type: 3}
   spawnArea: {x: 15, y: 10}
   bossHealthBar: {fileID: 0}

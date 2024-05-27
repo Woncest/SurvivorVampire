@@ -28,7 +28,6 @@ public class EnemiesSpawnGroup{
 
 public class EnemiesManager : MonoBehaviour
 {
-    [SerializeField] StageProgress stageProgress;
     [SerializeField] GameObject enemy;
     [SerializeField] Vector2 spawnArea;
     GameObject target;
@@ -96,7 +95,6 @@ public class EnemiesManager : MonoBehaviour
         Enemy newEnemyComponent = newEnemy.GetComponent<Enemy>();
         newEnemyComponent.SetTarget(target);
         newEnemyComponent.SetStats(enemyToSpawn.stats);
-        newEnemyComponent.UpdateStatsForProgress(stageProgress.Progress);
         newEnemy.transform.parent = transform;
 
         if(isBoss){

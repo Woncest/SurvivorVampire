@@ -113,11 +113,6 @@ public class Enemy : MonoBehaviour, IDamageable
         this.stats = new EnemyStats(stats);
     }
 
-    internal void UpdateStatsForProgress(float progress)
-    {
-        stats.ApplyProgress(progress);
-    }
-
     private void OnDestroy(){
         bossTracking.StopTrackBoss();
     }
