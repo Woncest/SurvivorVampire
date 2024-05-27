@@ -20,13 +20,6 @@ public class EnemyStats{
         this.experience_reward = stats.experience_reward;
         this.speed = stats.speed;
     }
-
-    internal void ApplyProgress(float progress)
-    {
-        this.hp *= progress;
-        this.hpMax *= progress;
-        this.damage *= progress;
-    }
 }
 
 public class Enemy : MonoBehaviour, IDamageable
