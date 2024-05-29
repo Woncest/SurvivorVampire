@@ -9,7 +9,6 @@ public class EnemyStats{
     public float hp = 4;
     public float hpMax {get; set;} = 4 ;
     public float damage = 1;
-    public int experience_reward = 100;
     public float speed = 1;
 
     public EnemyStats(EnemyStats stats)
@@ -17,7 +16,6 @@ public class EnemyStats{
         this.hp = stats.hp;
         this.hpMax = stats.hp;
         this.damage = stats.damage;
-        this.experience_reward = stats.experience_reward;
         this.speed = stats.speed;
     }
 }
@@ -99,7 +97,6 @@ public class Enemy : MonoBehaviour, IDamageable
         stats.hp -= damage;
         if(stats.hp < 0){ stats.hp = 0;}
         if(stats.hp <= 0){
-            targetGameObject.GetComponent<Level>().AddExperience(stats.experience_reward);
             GetComponent<DropOnDestroy>().CheckDrop();
             Destroy(gameObject);
         }
