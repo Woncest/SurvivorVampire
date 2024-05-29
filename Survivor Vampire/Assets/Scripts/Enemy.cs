@@ -69,8 +69,9 @@ public class Enemy : MonoBehaviour, IDamageable
         rgdbd2d.velocity = direction * stats.speed;
     }
 
-    private void OnCollisionStay2D(Collision2D coll){
-        if(coll.gameObject == targetGameObject){
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject == targetGameObject){
             Attack();
         }
     }
