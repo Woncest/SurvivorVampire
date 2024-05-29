@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Level : MonoBehaviour
     PassiveItems passiveItems;
 
     [SerializeField] List<UpgradesSO> startUpgrades;
+
+    [SerializeField] GameObject closeButton;
 
     private void Awake(){
         weaponManager = GetComponent<WeaponManager>();
@@ -104,6 +107,12 @@ public class Level : MonoBehaviour
 
             chosenIndices.Add(randomIndex); // Add the index to the chosen set
             upgradeList.Add(upgrades[randomIndex]); // Add the corresponding upgrade to the list
+        }
+
+        if(upgradeList.Count > 0){
+            closeButton.SetActive(false);
+        }else{
+            closeButton.SetActive(true);
         }
 
         return upgradeList;
