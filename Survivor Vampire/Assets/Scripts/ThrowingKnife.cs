@@ -24,8 +24,24 @@ public class ThrowingKnife : WeaponBase
             }
             thrownKnife.transform.position = newKnifePosition;
             ThrowingKnifeProjectile throwingKnifeProjectile = thrownKnife.GetComponent<ThrowingKnifeProjectile>();
-            throwingKnifeProjectile.SetDirection(playerMove.lastHorizontalVector, 0f);
+            Vector3 mouseWorldPosition = GetMouseWorldPosition();
+            Vector3 direction = (mouseWorldPosition - throwingKnifeProjectile.transform.position).normalized;
+            throwingKnifeProjectile.SetDirection(direction.x, direction.y);
+            RotateProjectile(throwingKnifeProjectile.gameObject, direction);
             throwingKnifeProjectile.damage = GetDamage();
         }
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        Vector3 mouseScreenPosition = Input.mousePosition;
+        mouseScreenPosition.z = Camera.main.nearClipPlane; // Set this to the distance of your camera to the object if necessary
+        return Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+    }
+
+    private void RotateProjectile(GameObject projectile, Vector3 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
     }
 }
