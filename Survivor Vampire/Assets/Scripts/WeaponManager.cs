@@ -7,6 +7,7 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] Transform weaponObjectsContainer;
     [SerializeField] WeaponData startingWeapon;
+    [SerializeField] ChargeBars chargeBars;
 
     List<WeaponBase> weapons;
 
@@ -29,6 +30,12 @@ public class WeaponManager : MonoBehaviour
         weaponBase.SetData(weaponData);
         weapons.Add(weaponBase);
         weaponBase.AddCharacter(character);
+        if(weaponData.needsChargeBar){
+            GameObject chargeBar = chargeBars.ActivateChargeBar();
+            if(chargeBar != null){
+                weaponBase.chargeBar = chargeBar.GetComponent<StatusBar>();
+            }
+        }
 
         Level level = GetComponent<Level>();
         if(level != null){

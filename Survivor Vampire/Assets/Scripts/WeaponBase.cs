@@ -10,14 +10,20 @@ public abstract class WeaponBase : MonoBehaviour
     public WeaponStats weaponStats;
 
     public float timer {get; set;}
+    private float timerChargeBar;
+    public StatusBar chargeBar;
 
     Character character;
 
     public void Update(){
         timer -= Time.deltaTime;
+        timerChargeBar += Time.deltaTime;
+        chargeBar.SetState(timerChargeBar,weaponStats.timeToAttack);
         if (timer < 0){
             Attack();
             timer = weaponStats.timeToAttack;
+            timerChargeBar = 0;
+            chargeBar.SetState(timerChargeBar,weaponStats.timeToAttack);
         }
     }
 
@@ -53,6 +59,9 @@ public abstract class WeaponBase : MonoBehaviour
     public void Upgrade(UpgradesSO upgrade)
     {
         weaponStats.Sum(upgrade.weaponUpgradeStats);
+        timer = weaponStats.timeToAttack;
+        timerChargeBar = 0;
+        if(chargeBar != null) chargeBar.SetState(timerChargeBar,weaponStats.timeToAttack);
     }
 
     public void AddCharacter(Character character)
