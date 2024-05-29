@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55952afd4b4b836468ae8acad7576d94, type: 2}
   - {fileID: 11400000, guid: 108f0eb50e35d1b4ead0afedba127ed6, type: 2}
   needsChargeBar: 1
+  sprite: {fileID: 21300000, guid: 905bd90e31a033149871d3fd426a6169, type: 3}

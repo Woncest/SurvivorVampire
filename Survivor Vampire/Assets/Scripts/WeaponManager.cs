@@ -31,7 +31,7 @@ public class WeaponManager : MonoBehaviour
         weapons.Add(weaponBase);
         weaponBase.AddCharacter(character);
         if(weaponData.needsChargeBar){
-            GameObject chargeBar = chargeBars.ActivateChargeBar();
+            GameObject chargeBar = chargeBars.ActivateChargeBar(weaponData.sprite);
             if(chargeBar != null){
                 weaponBase.chargeBar = chargeBar.GetComponent<StatusBar>();
             }

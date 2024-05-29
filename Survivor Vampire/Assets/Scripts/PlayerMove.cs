@@ -41,6 +41,11 @@ public class PlayerMove : MonoBehaviour
 
         animate.horizontal = movementVector.x;
 
+        if (movementVector.sqrMagnitude > 1)
+        {
+            movementVector.Normalize();
+        }
+
         movementVector *= speed;
 
         rgbd2d.velocity = movementVector;

@@ -22,3 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c71a5d98d12ba94487ef40fb1ed57cc, type: 2}
   - {fileID: 11400000, guid: e1756319e8174924c8fb8284cd9ec399, type: 2}
   - {fileID: 11400000, guid: ff2029240c6e0164094826ce91512639, type: 2}
+  needsChargeBar: 0
+  sprite: {fileID: -1111556851, guid: 6e5fb3c5370706042bf21aa467e6e1fe, type: 3}

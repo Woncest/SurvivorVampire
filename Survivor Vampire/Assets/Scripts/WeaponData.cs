@@ -32,4 +32,5 @@ public class WeaponData : ScriptableObject
     public GameObject weaponBasePrefab;
     public List<UpgradesSO> upgrades;
     public bool needsChargeBar;
+    public Sprite sprite;
 }
