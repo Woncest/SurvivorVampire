@@ -134,5 +134,5 @@ MonoBehaviour:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
-  timer: 0
   attackAreaSize: 3
+  radiusCircle: {fileID: 6023705462697600789}
