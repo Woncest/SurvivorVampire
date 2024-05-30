@@ -22,7 +22,6 @@ public class StageEventManager : MonoBehaviour
     private void Update(){
         if (eventIndexer >= stageSO.events.Count) { return;}
         if(stageTimer.time > stageSO.events[eventIndexer].time){
-            Debug.Log(stageSO.events[eventIndexer].message);
 
             switch(stageSO.events[eventIndexer].eventType){
                 case StageEventType.SpawnEnemy:

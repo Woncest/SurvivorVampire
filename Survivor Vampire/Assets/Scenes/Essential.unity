@@ -4349,6 +4349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 657993565}
+  pauseManager: {fileID: 770776915}
   weapons: {fileID: 115109726}
 --- !u!114 &1480659912
 MonoBehaviour:
