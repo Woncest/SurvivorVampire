@@ -6,10 +6,12 @@ using UnityEngine;
 [Serializable]
 public class ItemStats{
     public int armor;
+    public float damageBonus;
 
     internal void Sum(ItemStats stats)
     {
         armor += stats.armor;
+        damageBonus += stats.damageBonus;
     }
 }
 
@@ -28,9 +30,11 @@ public class Item : ScriptableObject
 
     public void Equip(Character character){
         character.armor += stats.armor;
+        character.damageBonus += stats.damageBonus;
     }
 
     public void UnEquip(Character character){
         character.armor -= stats.armor;
+        character.damageBonus -= stats.damageBonus;
     }
 }

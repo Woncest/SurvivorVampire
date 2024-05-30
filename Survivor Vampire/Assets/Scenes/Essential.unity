@@ -4596,6 +4596,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d71aab75cdf64ee41bfac88cae1bfbc3, type: 2}
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
+  - {fileID: 11400000, guid: b9b75484f58f460438cd11aa8b15deed, type: 2}
   closeButton: {fileID: 1753274429}
 --- !u!114 &1480659909
 MonoBehaviour:
