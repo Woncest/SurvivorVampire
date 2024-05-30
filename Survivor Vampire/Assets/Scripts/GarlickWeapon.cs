@@ -9,7 +9,7 @@ public class GarlickWeapon : WeaponBase
 
     private SpriteRenderer radiusCircleRenderer;
     private float initialAlpha = 0.15f; // 15% alpha
-    private float maxAlpha = 0.3f; // 30% alpha
+    private float maxAlpha = 0.4f; // 40% alpha
 
     void Start()
     {

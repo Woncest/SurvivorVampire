@@ -16,6 +16,5 @@ MonoBehaviour:
   animatedPrefab: {fileID: 5825047070758591466, guid: fca6a64007a3d9c47bfb129b5680fca0, type: 3}
   stats:
     hp: 6
-    damage: 1
-    experience_reward: 100
+    damage: 10
     speed: 1
