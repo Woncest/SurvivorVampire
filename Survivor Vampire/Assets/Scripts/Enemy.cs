@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
     private BossTracking bossTracking;
     private StatusBar hpBar;
+    private float attackCooldown = 0;
 
     private void Awake(){
         rgdbd2d = GetComponent<Rigidbody2D>();
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     private void Update(){
+        attackCooldown -= Time.deltaTime;
         if(isBoss && !spriteRenderer.isVisible){
             bossTracking.TrackBoss();
         }
@@ -69,8 +71,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject == targetGameObject){
+        if(collision.gameObject == targetGameObject && attackCooldown < 0){
             Attack();
+            attackCooldown = 1;
         }
     }
 
