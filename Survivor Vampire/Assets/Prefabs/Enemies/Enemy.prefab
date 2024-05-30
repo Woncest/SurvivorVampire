@@ -78,7 +78,6 @@ MonoBehaviour:
   stats:
     hp: 4
     damage: 1
-    experience_reward: 100
     speed: 1
   isBoss: 0
 --- !u!114 &9141301555826261772

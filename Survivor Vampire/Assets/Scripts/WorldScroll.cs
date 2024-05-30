@@ -62,8 +62,9 @@ public class WorldScroll : MonoBehaviour
                     tile.transform.position = newPosition;
                     terrainTiles[tileToUpdate_x,tileToUpdate_y].GetComponent<TerrainTile>().Spawn();
 
-                    if (UnityEngine.Random.Range(0, 25) == 0 && stageTimer.time > 1) // Generates a random number between 0 and 32 (inclusive)
+                    if (UnityEngine.Random.Range(0, 10) == 0 && stageTimer.time > 1) // Generates a random number between 0 and 10 (inclusive)
                     {
+                        Debug.Log("Spawned");
                         Instantiate(nestPrefab, newPosition, Quaternion.identity);
                     }
                     
