@@ -38,7 +38,7 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] Slider bossHealthBar;
 
     List<EnemiesSpawnGroup> enemiesSpawnGroupList;
-    List<EnemiesSpawnGroup> repeatedSpawnGroupList;
+    public List<EnemiesSpawnGroup> repeatedSpawnGroupList {get; set;}
 
     private void Start(){
         target = GameManager.instance.playerTransform.gameObject;

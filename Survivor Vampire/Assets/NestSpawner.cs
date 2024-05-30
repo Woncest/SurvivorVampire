@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NestSpawner : MonoBehaviour
@@ -15,9 +16,9 @@ public class NestSpawner : MonoBehaviour
 
     void Update()
     {
-        if(spriteRenderer.isVisible){
+        if(spriteRenderer.isVisible && enemiesManager.repeatedSpawnGroupList.First() != null){
             for (int i = 0; i < 250; i++){
-                enemiesManager.SpawnEnemyAtPoint(enemy, transform.position);
+                enemiesManager.SpawnEnemyAtPoint(enemiesManager.repeatedSpawnGroupList.First().enemySO, transform.position);
             }
             Destroy(gameObject);
         }
