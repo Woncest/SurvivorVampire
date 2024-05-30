@@ -108,6 +108,26 @@ public class EnemiesManager : MonoBehaviour
         spriteObject.transform.localPosition = Vector3.zero;
     }
 
+    public void SpawnEnemyAtPoint(EnemySO enemyToSpawn, Vector3 pointToSpawn)
+    {
+        //spawning main object of enemy
+        GameObject newEnemy = Instantiate(enemy);
+        float randomOffsetX = UnityEngine.Random.Range(-2.5f, 2.5f);
+        float randomOffsetY = UnityEngine.Random.Range(-2.5f, 2.5f);
+        Vector3 randomizedSpawnPoint = new Vector3(pointToSpawn.x + randomOffsetX, pointToSpawn.y + randomOffsetY, pointToSpawn.z);
+        newEnemy.transform.position = randomizedSpawnPoint;
+
+        Enemy newEnemyComponent = newEnemy.GetComponent<Enemy>();
+        newEnemyComponent.SetTarget(target);
+        newEnemyComponent.SetStats(enemyToSpawn.stats);
+        newEnemy.transform.parent = transform;
+
+        //spawning sprite object of enemy
+        GameObject spriteObject = Instantiate(enemyToSpawn.animatedPrefab);
+        spriteObject.transform.parent = newEnemy.transform;
+        spriteObject.transform.localPosition = Vector3.zero;
+    }
+
     private void SpawnEnemyBoss(Enemy newBoss)
     {
         if (bossEnemiesList == null) { bossEnemiesList = new List<Enemy>();}

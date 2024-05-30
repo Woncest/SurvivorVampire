@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BossTracking : MonoBehaviour
 {
-    public GameObject redTrianglePrefab; // Assign the red triangle prefab in the Unity Editor
+    public GameObject redTrianglePrefab;
 
-    private GameObject redTriangle; // Reference to the instantiated red triangle GameObject
+    private GameObject redTriangle;
 
     public void TrackBoss(){
         Transform playerTransform = GameManager.instance.playerTransform;
