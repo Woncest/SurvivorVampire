@@ -6,6 +6,7 @@ using UnityEngine;
 public class WorldScroll : MonoBehaviour
 {
     [SerializeField] GameObject nestPrefab;
+    [SerializeField] StageTimer stageTimer;
     Transform playerTransfrom;
     Vector2Int currentTilePosition = new Vector2Int(0,0);
     [SerializeField] Vector2Int playerTilePosition;
@@ -61,7 +62,7 @@ public class WorldScroll : MonoBehaviour
                     tile.transform.position = newPosition;
                     terrainTiles[tileToUpdate_x,tileToUpdate_y].GetComponent<TerrainTile>().Spawn();
 
-                    if (UnityEngine.Random.Range(0, 25) == 0) // Generates a random number between 0 and 32 (inclusive)
+                    if (UnityEngine.Random.Range(0, 25) == 0 && stageTimer.time > 1) // Generates a random number between 0 and 32 (inclusive)
                     {
                         Instantiate(nestPrefab, newPosition, Quaternion.identity);
                     }

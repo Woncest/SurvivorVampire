@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nestPrefab: {fileID: 1373607324876969128, guid: c55430d5bdca83e4b81acb1d14b05ee4, type: 3}
+  stageTimer: {fileID: 362067890}
   playerTilePosition: {x: 1, y: 1}
   tileSize: 20
   terrainTileHorizontalCount: 3
