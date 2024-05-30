@@ -24,4 +24,4 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: d5c69ed34e86a384fb5da351a46e235c, type: 2}
   itemStats:
     armor: 0
-    damageBonus: 0
+    damageBonus: 0.1
