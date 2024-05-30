@@ -58,7 +58,6 @@ public class EnemiesManager : MonoBehaviour
             return;
         }
         RemoveDeadEnemies();
-        Debug.Log(bossEnemiesList.Count);
         bossHealthBar.gameObject.SetActive(true);
 
         currentBossHealth = 0;
