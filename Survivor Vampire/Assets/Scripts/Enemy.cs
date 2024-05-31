@@ -10,6 +10,7 @@ public class EnemyStats{
     public float hpMax {get; set;} = 4 ;
     public float damage = 1;
     public float speed = 1;
+    public float xpDropMultiplier = 1;
 
     public EnemyStats(EnemyStats stats)
     {
@@ -17,6 +18,7 @@ public class EnemyStats{
         this.hpMax = stats.hp;
         this.damage = stats.damage;
         this.speed = stats.speed;
+        this.xpDropMultiplier = stats.xpDropMultiplier;
     }
 }
 
