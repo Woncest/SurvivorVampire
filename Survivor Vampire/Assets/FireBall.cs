@@ -24,7 +24,7 @@ public class FireBall : WeaponBase
 
     public new virtual void Update()
     {
-        angle += speed * Time.deltaTime;
+        angle += speed * Time.deltaTime * 1.5f;
 
         float x = Mathf.Cos(angle) * radius;
         float y = Mathf.Sin(angle) * radius;
