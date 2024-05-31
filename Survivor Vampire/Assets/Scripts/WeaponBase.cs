@@ -13,7 +13,7 @@ public abstract class WeaponBase : MonoBehaviour
     private float timerChargeBar;
     public StatusBar chargeBar;
 
-    Character character;
+    public Character character;
 
     public void Update(){
         timer -= Time.deltaTime;

@@ -11,6 +11,7 @@ public class FireBall : WeaponBase
     private Collider2D attackTarget;
     private GameObject secondFireBall;
     public bool setSecondFireBall = false;
+    public bool isSecondFireBall = false;
     public override void Attack()
     {
         ApplyDamage(new Collider2D[] { attackTarget });
@@ -32,13 +33,21 @@ public class FireBall : WeaponBase
 
         float x = Mathf.Cos(angle) * radius;
         float y = Mathf.Sin(angle) * radius;
+        if (isSecondFireBall){
+            x *= -1;
+            y *= -1;
+        }
 
         Vector2 directionFireBall = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
 
         transform.localPosition = new Vector3(x, y, transform.localPosition.z);
 
         float angleDegrees = Mathf.Atan2(directionFireBall.y, directionFireBall.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angleDegrees + 90);
+        if(!isSecondFireBall){
+            transform.rotation = Quaternion.Euler(0, 0, angleDegrees + 90);
+        }else{
+            transform.rotation = Quaternion.Euler(0, 0, angleDegrees - 90);
+        }
     }
 
     private void CheckForExtraFireBalls()
@@ -46,6 +55,9 @@ public class FireBall : WeaponBase
         if(weaponStats.numberOfAttacks == 2 && !setSecondFireBall){
             secondFireBall = Instantiate(gameObject);
             secondFireBall.GetComponent<FireBall>().setSecondFireBall = true;
+            secondFireBall.GetComponent<FireBall>().isSecondFireBall = true;
+            secondFireBall.GetComponent<WeaponBase>().weaponStats = weaponStats;
+            secondFireBall.GetComponent<WeaponBase>().character = character;
             setSecondFireBall = true;
             secondFireBall.transform.parent = transform.parent;
         }
