@@ -29,25 +29,27 @@ public class FireBall : WeaponBase
     public new virtual void Update()
     {
         CheckForExtraFireBalls();
-        angle += speed * Time.deltaTime * 1.5f;
+
+        // Adjust angle increment based on whether this is the second fireball or not
+        if (!isSecondFireBall)
+        {
+            angle += speed * Time.deltaTime * 1.5f;
+        }
+        else
+        {
+            angle -= speed * Time.deltaTime * 1.5f;
+        }
 
         float x = Mathf.Cos(angle) * radius;
         float y = Mathf.Sin(angle) * radius;
-        if (isSecondFireBall){
-            x *= -1;
-            y *= -1;
-        }
 
         Vector2 directionFireBall = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
 
         transform.localPosition = new Vector3(x, y, transform.localPosition.z);
 
+        // Update rotation
         float angleDegrees = Mathf.Atan2(directionFireBall.y, directionFireBall.x) * Mathf.Rad2Deg;
-        if(!isSecondFireBall){
-            transform.rotation = Quaternion.Euler(0, 0, angleDegrees + 90);
-        }else{
-            transform.rotation = Quaternion.Euler(0, 0, angleDegrees - 90);
-        }
+        transform.rotation = Quaternion.Euler(0, 0, angleDegrees + (isSecondFireBall ? -90 : 90));
     }
 
     private void CheckForExtraFireBalls()
