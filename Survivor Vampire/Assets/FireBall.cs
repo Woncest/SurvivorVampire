@@ -7,14 +7,19 @@ public class FireBall : WeaponBase
     public float radius = 2.5f;
     public float speed = 1.0f;
     private float angle = 0.0f;
+    private Collider2D attackTarget;
     public override void Attack()
     {
-        throw new System.NotImplementedException();
+        ApplyDamage(new Collider2D[] { attackTarget });
     }
 
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Enemy"))
+        {
+            attackTarget = other;
+            Attack();
+        }
     }
 
     public new virtual void Update()

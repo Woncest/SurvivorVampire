@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2357615570081016342}
   - component: {fileID: 5173437705913109527}
   - component: {fileID: -3111358212874465249}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LogStump1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

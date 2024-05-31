@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4584370660431853845}
   - component: {fileID: 983222113130890592}
   - component: {fileID: -5250243947966199527}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Log1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

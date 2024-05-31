@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5860642491111244451}
   - component: {fileID: 4950044619090563663}
   - component: {fileID: -3253398677880056417}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GraveStone1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

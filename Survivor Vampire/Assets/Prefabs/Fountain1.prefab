@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2360392839949316608}
   - component: {fileID: 2181299650222725402}
   - component: {fileID: 5037243500155384915}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fountain1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
