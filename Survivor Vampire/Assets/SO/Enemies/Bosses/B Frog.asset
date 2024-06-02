@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52cd66f304a2a545a31c13f7c6527a4, type: 3}
+  m_Name: B Frog
+  m_EditorClassIdentifier: 
+  Name: Frog
+  animatedPrefab: {fileID: 7593007762961415971, guid: 576317d90f13a024893890289e239908, type: 3}
+  stats:
+    hp: 100
+    damage: 30
+    speed: 1.3
+    xpDropMultiplier: 8

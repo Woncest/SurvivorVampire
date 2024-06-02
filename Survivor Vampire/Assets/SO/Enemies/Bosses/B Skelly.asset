@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52cd66f304a2a545a31c13f7c6527a4, type: 3}
+  m_Name: B Skelly
+  m_EditorClassIdentifier: 
+  Name: Skelly
+  animatedPrefab: {fileID: 4022464099470802269, guid: 8fd8da71e1a493d4ba4df9ead159c5fe, type: 3}
+  stats:
+    hp: 75
+    damage: 13
+    speed: 1.2
+    xpDropMultiplier: 7

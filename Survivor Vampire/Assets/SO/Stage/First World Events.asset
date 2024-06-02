@@ -24,7 +24,7 @@ MonoBehaviour:
   - eventType: 1
     time: 30
     message: Winner Winner Chicken Dinner
-    enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
+    enemyToSpawn: {fileID: 11400000, guid: 5ab1a1372991f684e9999678cf98c1a9, type: 2}
     objectToSpawn: {fileID: 0}
     count: 5
     isRepeatedEvent: 0
@@ -42,15 +42,15 @@ MonoBehaviour:
     message: Winner Winner Chicken Dinner
     enemyToSpawn: {fileID: 0}
     objectToSpawn: {fileID: 782318077624722472, guid: 17b0f76834d72e74083d7de209d67ef8, type: 3}
-    count: 2
+    count: 1
     isRepeatedEvent: 0
     repeatedEverySeconds: 0
   - eventType: 1
     time: 60
     message: Winner Winner Chicken Dinner
-    enemyToSpawn: {fileID: 11400000, guid: 1aa4a25b6eb9a6148bceb1eb105cdee9, type: 2}
+    enemyToSpawn: {fileID: 11400000, guid: fffe68fefb607954bacba8f0e3539059, type: 2}
     objectToSpawn: {fileID: 0}
-    count: 10
+    count: 5
     isRepeatedEvent: 0
     repeatedEverySeconds: 0
   - eventType: 0
@@ -69,8 +69,80 @@ MonoBehaviour:
     count: 2
     isRepeatedEvent: 0
     repeatedEverySeconds: 0
-  - eventType: 3
+  - eventType: 1
     time: 90
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: 90dc3c8038f9c5146b48872a798c57fd, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 0
+    time: 90
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: a5352029690235b43832d4124c043dff, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 2
+    isRepeatedEvent: 1
+    repeatedEverySeconds: 0.5
+  - eventType: 2
+    time: 90
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 782318077624722472, guid: 17b0f76834d72e74083d7de209d67ef8, type: 3}
+    count: 3
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 1
+    time: 120
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: 15c838ab6369584408e31b6ba3f64690, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 0
+    time: 120
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: 26d30e4ec9a0bb741ae3ed7bbca3c511, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 2
+    isRepeatedEvent: 1
+    repeatedEverySeconds: 0.5
+  - eventType: 2
+    time: 120
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 782318077624722472, guid: 17b0f76834d72e74083d7de209d67ef8, type: 3}
+    count: 4
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 1
+    time: 150
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: e76eff0d059a9be459fe92bcf066919c, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 0
+    time: 150
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 11400000, guid: d9e248a13af0ae641a1b6d3d6a74d770, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 2
+    isRepeatedEvent: 1
+    repeatedEverySeconds: 0.5
+  - eventType: 2
+    time: 150
+    message: Winner Winner Chicken Dinner
+    enemyToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 782318077624722472, guid: 17b0f76834d72e74083d7de209d67ef8, type: 3}
+    count: 5
+    isRepeatedEvent: 0
+    repeatedEverySeconds: 0
+  - eventType: 3
+    time: 180
     message: Winner Winner Chicken Dinner
     enemyToSpawn: {fileID: 0}
     objectToSpawn: {fileID: 0}

@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killBossText: {fileID: 319780617}
-  numberOfBosses: 2
+  numberOfBosses: 5
 --- !u!114 &1092050665
 MonoBehaviour:
   m_ObjectHideFlags: 0
