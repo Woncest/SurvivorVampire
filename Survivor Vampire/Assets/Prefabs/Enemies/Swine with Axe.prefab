@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5815901379679120621}
   - component: {fileID: 7339337010281660866}
   - component: {fileID: 7649926199817767397}
+  - component: {fileID: 7956245668634292740}
   m_Layer: 5
   m_Name: Swine with Axe
   m_TagString: Enemy
@@ -153,6 +154,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97893524, y: 1.3385558}
   m_EdgeRadius: 0
+--- !u!114 &7956245668634292740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246364494590837119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803f3ed809da2fa4c9ff4749085b6a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8771882300198480548
 PrefabInstance:
   m_ObjectHideFlags: 0
