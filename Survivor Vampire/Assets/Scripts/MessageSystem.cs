@@ -14,7 +14,7 @@ public class MessageSystem : MonoBehaviour
 
     List<TMPro.TextMeshPro> messagePool;
 
-    int objectCount = 10;
+    int objectCount = 50;
     int count;
 
     private void Start(){

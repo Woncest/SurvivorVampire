@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52cd66f304a2a545a31c13f7c6527a4, type: 3}
-  m_Name: SwineWIthAxe
+  m_Name: Frog
   m_EditorClassIdentifier: 
-  Name: SwineWithAxe
-  animatedPrefab: {fileID: 1246364494590837119, guid: a3cb5f04ca2affb4191402ca75209cd9, type: 3}
+  Name: Frog
+  animatedPrefab: {fileID: 7593007762961415971, guid: 86f4e06330716764c9e7ac3d62281893, type: 3}
   stats:
-    hp: 25
-    damage: 28
-    speed: 0.8
-    xpDropMultiplier: 1.8
+    hp: 17
+    damage: 15
+    speed: 1.3
+    xpDropMultiplier: 1.6

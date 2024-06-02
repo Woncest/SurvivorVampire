@@ -215,7 +215,7 @@ TextureImporter:
         width: 25
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 25
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
         width: 25
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 25
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,132 @@ TextureImporter:
       bones: []
       spriteID: e6a80b857fde28f4a9afceb40b458764
       internalID: 426217659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_4
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200d3968f04395c44813f007c07e1e6e
+      internalID: 1625073053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5246a3a3678b1f741b25188cb25e2bcf
+      internalID: 1427329913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7585c0e6e716f54fa70f213e43c2e1c
+      internalID: -171188446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6b4b267168db44982b54e27aa06c19
+      internalID: -68780853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4322696570e956e459ea3b1de0df5cb0
+      internalID: 532097060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_walking_6
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 356
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea384ecc0caf9544abf5cd90e56dffc
+      internalID: 790033787
       vertices: []
       indices: 
       edges: []
@@ -305,6 +431,12 @@ TextureImporter:
       Skelly_walking_2: -1762328010
       Skelly_walking_3: -275180434
       Skelly_walking_4: 426217659
+      frog_walking_1: -68780853
+      frog_walking_2: -171188446
+      frog_walking_3: 1427329913
+      frog_walking_4: 1625073053
+      frog_walking_5: 532097060
+      frog_walking_6: 790033787
       walking_swine_1: -1106974729
       walking_swine_2: 187904056
       walking_swine_3: 1636883195
