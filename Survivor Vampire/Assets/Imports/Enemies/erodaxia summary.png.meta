@@ -206,6 +206,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Skelly_walking_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 49
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae588ae520bb26458a1202e449c3911
+      internalID: 1479403641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skelly_walking_2
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 49
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47ee5810ba0d0847b53db5e611c1189
+      internalID: -1762328010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skelly_walking_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 49
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3f0999e89b18d4191ec0fe4328d7a9
+      internalID: -275180434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skelly_walking_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 49
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a80b857fde28f4a9afceb40b458764
+      internalID: 426217659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -217,6 +301,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Skelly_walking_1: 1479403641
+      Skelly_walking_2: -1762328010
+      Skelly_walking_3: -275180434
+      Skelly_walking_4: 426217659
       walking_swine_1: -1106974729
       walking_swine_2: 187904056
       walking_swine_3: 1636883195

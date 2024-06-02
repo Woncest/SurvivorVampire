@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52cd66f304a2a545a31c13f7c6527a4, type: 3}
-  m_Name: SwineWIthAxe
+  m_Name: Skelly
   m_EditorClassIdentifier: 
-  Name: SwineWithAxe
-  animatedPrefab: {fileID: 1246364494590837119, guid: a3cb5f04ca2affb4191402ca75209cd9, type: 3}
+  Name: Skelly
+  animatedPrefab: {fileID: 4022464099470802269, guid: 4abced92864e96b459f058d5f505c9ce, type: 3}
   stats:
-    hp: 20
-    damage: 25
-    speed: 0.9
-    xpDropMultiplier: 1.6
+    hp: 15
+    damage: 13
+    speed: 1.2
+    xpDropMultiplier: 1.4
