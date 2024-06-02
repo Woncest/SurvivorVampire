@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52cd66f304a2a545a31c13f7c6527a4, type: 3}
-  m_Name: Pumpkin
+  m_Name: SwineWIthAxe
   m_EditorClassIdentifier: 
-  Name: Pumpkin
-  animatedPrefab: {fileID: 5825047070758591466, guid: fca6a64007a3d9c47bfb129b5680fca0, type: 3}
+  Name: SwineWithAxe
+  animatedPrefab: {fileID: 1246364494590837119, guid: a3cb5f04ca2affb4191402ca75209cd9, type: 3}
   stats:
-    hp: 10
-    damage: 10
-    speed: 1
-    xpDropMultiplier: 1.2
+    hp: 15
+    damage: 15
+    speed: 0.9
+    xpDropMultiplier: 1.4
