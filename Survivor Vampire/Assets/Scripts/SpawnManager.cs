@@ -10,8 +10,9 @@ public class SpawnManager : MonoBehaviour
         instance = this;
     }
 
-    public void SpawnObject(Vector3 worldPosition, GameObject toSpawn){
+    public GameObject SpawnObject(Vector3 worldPosition, GameObject toSpawn){
         Transform t = Instantiate(toSpawn, transform).transform;
         t.position = worldPosition;
+        return t.gameObject;
     }
 }

@@ -16,9 +16,9 @@ public class DropOnDestroy : MonoBehaviour
         if(isQuitting) {return;}
         
         GameObject toDrop = dropItemPrefab[Random.Range(0, dropItemPrefab.Count)];
-        if(toDrop.tag == "XP"){
-            toDrop.GetComponent<GemPickUp>().amount = (int)(gameObject.GetComponent<Enemy>().stats.xpDropMultiplier * toDrop.GetComponent<GemPickUp>().amount);
+        GameObject drop = SpawnManager.instance.SpawnObject(transform.position, toDrop);
+        if(drop.tag == "XP"){
+            drop.GetComponent<GemPickUp>().amount = (int)(gameObject.GetComponent<Enemy>().stats.xpDropMultiplier * drop.GetComponent<GemPickUp>().amount);
         }
-        SpawnManager.instance.SpawnObject(transform.position, toDrop);
     }
 }
