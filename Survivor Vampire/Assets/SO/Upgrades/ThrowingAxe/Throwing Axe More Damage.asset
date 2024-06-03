@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a25a5f40ba090f840b923a2f209f6a04, type: 3}
-  m_Name: FireBall Unlock
+  m_Name: Throwing Axe More Damage
   m_EditorClassIdentifier: 
-  upgradeType: 2
-  upgradeName: FireBall
-  description: Unlock a circling FireBall
-  icon: {fileID: -1432390835, guid: a63406cfdbfed304f92ce627095006ee, type: 3}
-  weaponData: {fileID: 11400000, guid: b2a885b2112142f4598e712039f9f7b2, type: 2}
+  upgradeType: 0
+  upgradeName: Throwing Axe More Damage
+  description: Sharpen your Axe
+  icon: {fileID: 158916524, guid: 71bb4eb237d612244a2c02fef5e139f8, type: 3}
+  weaponData: {fileID: 11400000, guid: 0b7038ed86150ac4bb7b7755d7f01489, type: 2}
   weaponUpgradeStats:
-    damage: 0
+    damage: 2
     timeToAttack: 0
     numberOfAttacks: 0
   item: {fileID: 0}

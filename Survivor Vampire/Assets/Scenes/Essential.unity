@@ -4595,6 +4595,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4995b516af3ee9d4f97f78e028ee1a84, type: 2}
   - {fileID: 11400000, guid: d71aab75cdf64ee41bfac88cae1bfbc3, type: 2}
   - {fileID: 11400000, guid: af8bb3864a63c574dbf5b246f0516a24, type: 2}
+  - {fileID: 11400000, guid: d81bc92d63f5b0448b490ecb597bfbd8, type: 2}
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
   - {fileID: 11400000, guid: b9b75484f58f460438cd11aa8b15deed, type: 2}

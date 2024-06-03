@@ -17,7 +17,7 @@ public class NestSpawner : MonoBehaviour
     void Update()
     {
         if(spriteRenderer.isVisible && enemiesManager.repeatedSpawnGroupList.First() != null){
-            for (int i = 0; i < 250; i++){
+            for (int i = 0; i < 150; i++){
                 enemiesManager.SpawnEnemyAtPoint(enemiesManager.repeatedSpawnGroupList.First().enemySO, transform.position);
             }
             Destroy(gameObject);
