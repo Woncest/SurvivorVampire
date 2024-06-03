@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Boomerang
   stats:
-    damage: 2.5
+    damage: 2
     timeToAttack: 1.5
     numberOfAttacks: 1
   weaponBasePrefab: {fileID: 8738087718097878327, guid: 855d8c7429ad75c4eabe981808785a3b, type: 3}
-  upgrades: []
+  upgrades:
+  - {fileID: 11400000, guid: 203c45df4b59faa4d9497270fc3a6dde, type: 2}
+  - {fileID: 11400000, guid: 9159f41ce9a59f946a91fe5adafabfd8, type: 2}
+  - {fileID: 11400000, guid: 865518cbaa397ed43a622bbe7aa5d24c, type: 2}
   needsChargeBar: 1
   sprite: {fileID: 803090002, guid: 8d5527a57da1e6a44ad80ff233b4bdd3, type: 3}

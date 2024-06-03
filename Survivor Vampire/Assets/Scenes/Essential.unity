@@ -4607,6 +4607,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d71aab75cdf64ee41bfac88cae1bfbc3, type: 2}
   - {fileID: 11400000, guid: af8bb3864a63c574dbf5b246f0516a24, type: 2}
   - {fileID: 11400000, guid: d81bc92d63f5b0448b490ecb597bfbd8, type: 2}
+  - {fileID: 11400000, guid: 91d1e6b86190eb64aa289934628d5b66, type: 2}
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
   - {fileID: 11400000, guid: b9b75484f58f460438cd11aa8b15deed, type: 2}
@@ -4665,7 +4666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectsContainer: {fileID: 115109727}
-  startingWeapon: {fileID: 11400000, guid: be01abdc7c14cc14aae53e75e98e56a5, type: 2}
+  startingWeapon: {fileID: 11400000, guid: c21ca1f3197587c46a869592cf3d558c, type: 2}
   chargeBars: {fileID: 1480659913}
 --- !u!114 &1480659913
 MonoBehaviour:

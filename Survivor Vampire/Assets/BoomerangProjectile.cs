@@ -39,4 +39,16 @@ public class BoomerangProjectile : MonoBehaviour
         yield return new WaitForSeconds(returnTimer);
         returning = true;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            IDamageable e = other.GetComponentInParent<IDamageable>();
+            if(e != null){
+                MessageSystem.instance.PostMessage(weaponStats.damage.ToString(), other.transform.position);
+                e.TakeDamage(weaponStats.damage);
+            }
+        }
+    }
 }
