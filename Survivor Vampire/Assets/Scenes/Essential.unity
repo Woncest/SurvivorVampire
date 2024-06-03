@@ -4582,7 +4582,9 @@ MonoBehaviour:
   maxHP: 1000
   currentHP: 1000
   armor: 0
+  xpBonus: 1
   hpRegenerationRate: 1
+  hpRegen: 1
   damageBonus: 0
   hpBar: {fileID: 33264067}
   level: {fileID: 0}
@@ -4611,6 +4613,8 @@ MonoBehaviour:
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
   - {fileID: 11400000, guid: b9b75484f58f460438cd11aa8b15deed, type: 2}
+  - {fileID: 11400000, guid: d51658fd888ee31499e3ee9c12df5408, type: 2}
+  - {fileID: 11400000, guid: 88e9857f4be6ad0479dac9fea66c7106, type: 2}
   closeButton: {fileID: 1753274429}
 --- !u!114 &1480659909
 MonoBehaviour:
@@ -4638,6 +4642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57040359435f93e4e816522d9d82c56b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
 --- !u!114 &1480659911
 MonoBehaviour:
   m_ObjectHideFlags: 0

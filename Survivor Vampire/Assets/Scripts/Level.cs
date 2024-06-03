@@ -21,6 +21,7 @@ public class Level : MonoBehaviour
     [SerializeField] List<UpgradesSO> startUpgrades;
 
     [SerializeField] GameObject closeButton;
+    Character character;
 
     private void Awake(){
         weaponManager = GetComponent<WeaponManager>();
@@ -37,9 +38,11 @@ public class Level : MonoBehaviour
         expBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
         expBar.SetLevelText(level);
         AddUpgradesIntoList(startUpgrades);
+        character = GetComponent<Character>();
     }
 
     public void AddExperience(int amount){
+        amount = (int)(amount * character.xpBonus);
         experience += amount;
         CheckLevelUp();
         expBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);

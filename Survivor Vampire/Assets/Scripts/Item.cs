@@ -7,11 +7,16 @@ using UnityEngine;
 public class ItemStats{
     public int armor;
     public float damageBonus;
+    public float hpRegen;
+    public float xpBonus;
 
     internal void Sum(ItemStats stats)
     {
         armor += stats.armor;
         damageBonus += stats.damageBonus;
+        hpRegen += stats.hpRegen;
+        xpBonus += stats.xpBonus;
+        Debug.Log(xpBonus);
     }
 }
 
@@ -31,10 +36,14 @@ public class Item : ScriptableObject
     public void Equip(Character character){
         character.armor += stats.armor;
         character.damageBonus += stats.damageBonus;
+        character.hpRegen += stats.hpRegen;
+        character.xpBonus += stats.xpBonus;
     }
 
     public void UnEquip(Character character){
         character.armor -= stats.armor;
         character.damageBonus -= stats.damageBonus;
+        character.hpRegen -= stats.hpRegen;
+        character.xpBonus -= stats.xpBonus;
     }
 }

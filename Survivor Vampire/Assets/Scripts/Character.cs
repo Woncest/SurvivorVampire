@@ -8,8 +8,10 @@ public class Character : MonoBehaviour
     public float maxHP = 1000;
     public float currentHP = 1000;
     public float armor = 0;
+    public float xpBonus = 1;
 
     public float hpRegenerationRate = 1f;
+    public float hpRegen = 1f;
     private float hpRegenTimer;
 
     public float damageBonus;
@@ -37,7 +39,7 @@ public class Character : MonoBehaviour
         hpRegenTimer += Time.deltaTime * hpRegenerationRate;
 
         if(hpRegenTimer > 1f){
-            Heal(1);
+            Heal(hpRegen);
             hpRegenTimer -= 1f;
         }
     }

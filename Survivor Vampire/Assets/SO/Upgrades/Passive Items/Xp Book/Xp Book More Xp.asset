@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25a5f40ba090f840b923a2f209f6a04, type: 3}
+  m_Name: Xp Book More Xp
+  m_EditorClassIdentifier: 
+  upgradeType: 1
+  upgradeName: Xp Book More Xp
+  description: Gain levels even faster
+  icon: {fileID: -345135032, guid: 0776fbb3ae33c484e8e89127c2b2e9ce, type: 3}
+  weaponData: {fileID: 0}
+  weaponUpgradeStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 11400000, guid: 9187bd46f08f2234cb8cc4cbf337992a, type: 2}
+  itemStats:
+    armor: 0
+    damageBonus: 0
+    hpRegen: 0
+    xpBonus: 0.1
