@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Endless Armor
   stats:
-    armor: 4
+    armor: 0
     damageBonus: 0
     hpRegen: 0
     xpBonus: 0

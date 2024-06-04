@@ -31,13 +31,21 @@ public class MessageSystem : MonoBehaviour
         go.SetActive(false);
     }
 
-    public void PostMessage(string text, Vector3 worldPositon){
-        messagePool[count].gameObject.SetActive(true);
-        messagePool[count].transform.position = worldPositon;
-        messagePool[count].GetComponent<TMPro.TextMeshPro>().text = text;
-        count++;
-        if(count >= objectCount){
-            count = 0;
-        }
+    public void PostMessage(string text, Vector3 worldPosition)
+{
+    if (float.TryParse(text, out float number))
+    {
+        text = number.ToString("0.##");
     }
+
+    messagePool[count].gameObject.SetActive(true);
+    messagePool[count].transform.position = worldPosition;
+    messagePool[count].GetComponent<TMPro.TextMeshPro>().text = text;
+    count++;
+    if (count >= objectCount)
+    {
+        count = 0;
+    }
+}
+
 }
