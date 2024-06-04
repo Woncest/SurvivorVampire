@@ -10,6 +10,10 @@ public class PassiveItems : MonoBehaviour
     Character character;
 
     private void Start(){
+        foreach(var item in items){
+            item.stats.armor = 0;
+            item.stats.damageBonus = 0;
+        }
     }
 
     private void Awake(){
