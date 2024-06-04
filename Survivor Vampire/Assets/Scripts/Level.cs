@@ -19,9 +19,12 @@ public class Level : MonoBehaviour
     PassiveItems passiveItems;
 
     [SerializeField] List<UpgradesSO> startUpgrades;
+    [SerializeField] List<UpgradesSO> endlessUpgradesToAdd;
+    [SerializeField] List<UpgradesSO> endlessUpgrades;
 
     [SerializeField] GameObject closeButton;
     Character character;
+    private bool loadIntoEndless;
 
     private void Awake(){
         weaponManager = GetComponent<WeaponManager>();
@@ -38,6 +41,9 @@ public class Level : MonoBehaviour
         expBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
         expBar.SetLevelText(level);
         AddUpgradesIntoList(startUpgrades);
+        loadIntoEndless = true;
+        AddUpgradesIntoList(endlessUpgradesToAdd);
+        loadIntoEndless = false;
         character = GetComponent<Character>();
     }
 
@@ -116,6 +122,7 @@ public class Level : MonoBehaviour
             closeButton.SetActive(false);
         }else{
             closeButton.SetActive(true);
+            return endlessUpgrades;
         }
 
         return upgradeList;
@@ -125,6 +132,10 @@ public class Level : MonoBehaviour
     {
         if(upgradesToAdd.Count == 0) {return;}
 
-        upgrades.AddRange(upgradesToAdd);
+        if(!loadIntoEndless){
+            upgrades.AddRange(upgradesToAdd);
+        }else{
+            endlessUpgrades.AddRange(upgradesToAdd);
+        }
     }
 }

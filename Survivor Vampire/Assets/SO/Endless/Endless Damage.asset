@@ -18,4 +18,5 @@ MonoBehaviour:
     damageBonus: 0
     hpRegen: 0
     xpBonus: 0
-  upgrades: []
+  upgrades:
+  - {fileID: 11400000, guid: 0bb264fcc81876240a5f1069f2dd83b2, type: 2}

@@ -4615,6 +4615,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d51658fd888ee31499e3ee9c12df5408, type: 2}
   - {fileID: 11400000, guid: b9b75484f58f460438cd11aa8b15deed, type: 2}
   - {fileID: 11400000, guid: 88e9857f4be6ad0479dac9fea66c7106, type: 2}
+  endlessUpgradesToAdd:
+  - {fileID: 11400000, guid: be7990616b756aa46a523031aa9bb3c9, type: 2}
+  - {fileID: 11400000, guid: 0bb264fcc81876240a5f1069f2dd83b2, type: 2}
+  endlessUpgrades: []
   closeButton: {fileID: 1753274429}
 --- !u!114 &1480659909
 MonoBehaviour:
@@ -4642,7 +4646,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57040359435f93e4e816522d9d82c56b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 3476b666dac372042a0ed352dfd81b5a, type: 2}
+  - {fileID: 11400000, guid: 2350cc3c9e130654a9934aa70bb52362, type: 2}
 --- !u!114 &1480659911
 MonoBehaviour:
   m_ObjectHideFlags: 0

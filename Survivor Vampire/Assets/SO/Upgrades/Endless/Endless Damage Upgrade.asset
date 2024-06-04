@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25a5f40ba090f840b923a2f209f6a04, type: 3}
   m_Name: Endless Damage Upgrade
   m_EditorClassIdentifier: 
-  upgradeType: 0
+  upgradeType: 1
   upgradeName: Endless Damage Upgrade
   description: Gain 10% more Damage
   icon: {fileID: 158916524, guid: 71bb4eb237d612244a2c02fef5e139f8, type: 3}
