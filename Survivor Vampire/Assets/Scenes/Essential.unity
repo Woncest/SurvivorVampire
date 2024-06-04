@@ -180,6 +180,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480659904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &151037600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8210255897227519018, guid: 30e3ef99b41e47345a1e064eb61984d8, type: 3}
+  m_PrefabInstance: {fileID: 1625516232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &151037601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 394209673910912213, guid: 30e3ef99b41e47345a1e064eb61984d8, type: 3}
@@ -4616,6 +4621,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af8bb3864a63c574dbf5b246f0516a24, type: 2}
   - {fileID: 11400000, guid: d81bc92d63f5b0448b490ecb597bfbd8, type: 2}
   - {fileID: 11400000, guid: 91d1e6b86190eb64aa289934628d5b66, type: 2}
+  - {fileID: 11400000, guid: cccb707f662c4f0458dd1069ad8960c8, type: 2}
   startUpgrades:
   - {fileID: 11400000, guid: 11a70019824a2ae48bb5933601041f7c, type: 2}
   - {fileID: 11400000, guid: d51658fd888ee31499e3ee9c12df5408, type: 2}
@@ -4683,7 +4689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectsContainer: {fileID: 115109727}
-  startingWeapon: {fileID: 11400000, guid: 06ac908f1af3ede49ac6992b28ef24d5, type: 2}
+  startingWeapon: {fileID: 11400000, guid: c21ca1f3197587c46a869592cf3d558c, type: 2}
   chargeBars: {fileID: 1480659913}
 --- !u!114 &1480659913
 MonoBehaviour:
@@ -4702,6 +4708,7 @@ MonoBehaviour:
   - {fileID: 74084596}
   - {fileID: 430612362}
   - {fileID: 151374751}
+  - {fileID: 151037600}
 --- !u!1 &1511642590
 GameObject:
   m_ObjectHideFlags: 0

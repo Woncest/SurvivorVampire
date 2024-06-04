@@ -18,6 +18,9 @@ MonoBehaviour:
     timeToAttack: 3
     numberOfAttacks: 1
   weaponBasePrefab: {fileID: 3144785285316583655, guid: f2e25543f5c296547b063d549f0cc14a, type: 3}
-  upgrades: []
+  upgrades:
+  - {fileID: 11400000, guid: 35f521108d96e3e46ae0f81ab36edd73, type: 2}
+  - {fileID: 11400000, guid: cc97efad87a0a984b988c95247d93170, type: 2}
+  - {fileID: 11400000, guid: dd0c63e288e086542b31e5aa63448477, type: 2}
   needsChargeBar: 1
   sprite: {fileID: 57781774, guid: 8d5527a57da1e6a44ad80ff233b4bdd3, type: 3}
