@@ -16,7 +16,6 @@ public class ItemStats{
         damageBonus += stats.damageBonus;
         hpRegen += stats.hpRegen;
         xpBonus += stats.xpBonus;
-        Debug.Log(xpBonus);
     }
 }
 

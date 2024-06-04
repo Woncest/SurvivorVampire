@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25a5f40ba090f840b923a2f209f6a04, type: 3}
+  m_Name: Endless Damage Upgrade
+  m_EditorClassIdentifier: 
+  upgradeType: 0
+  upgradeName: Endless Damage Upgrade
+  description: Gain 10% more Damage
+  icon: {fileID: 158916524, guid: 71bb4eb237d612244a2c02fef5e139f8, type: 3}
+  weaponData: {fileID: 0}
+  weaponUpgradeStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 11400000, guid: 2350cc3c9e130654a9934aa70bb52362, type: 2}
+  itemStats:
+    armor: 0
+    damageBonus: 0.1
+    hpRegen: 0
+    xpBonus: 0
